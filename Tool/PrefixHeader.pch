@@ -48,12 +48,13 @@
 #define Default_General_Image [UIImage imageNamed:@"渐变条"]
 
 //适配高度
-#define KIsiPhoneX ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO)
+#define JSH_IsiPhoneX ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO)
 
-#define kStatusBarHeight [[UIApplication sharedApplication] statusBarFrame].size.height
-#define kNavBarHeight 44.0
-#define kTabBarHeight ([[UIApplication sharedApplication] statusBarFrame].size.height>20?83:49)
-#define kTopHeight (kStatusBarHeight + kNavBarHeight)
+#define JSH_StatusBarHeight [[UIApplication sharedApplication] statusBarFrame].size.height
+#define JSH_NavBarHeight 44.0
+#define JSH_NavbarAndStatusBarHeight (JSH_StatusBarHeight + JSH_NavBarHeight)
+#define JSH_TabBarHeight ([[UIApplication sharedApplication] statusBarFrame].size.height>20?83:49)
+#define JSH_SafeBottomMargin   ([[UIApplication sharedApplication] statusBarFrame].size.height>20 ? 34.f : 0.f)
 
 //测试环境
 #define APIEHEAD @"http://wxya.langyadt.com/"  //网络请求头
