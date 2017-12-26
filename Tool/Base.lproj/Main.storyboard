@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cct-Eq-tt6">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gif-MK-pOp">
+                                <rect key="frame" x="0.0" y="88" width="375" height="690"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X6J-JO-ScF">
+                                        <rect key="frame" x="149.33333333333334" y="330" width="77" height="30"/>
+                                        <state key="normal" title="下一个页面"/>
+                                        <connections>
+                                            <action selector="nextView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f2M-6v-eAF"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0nB-OG-7Hd">
+                                        <rect key="frame" x="160.66666666666666" y="388" width="54" height="30"/>
+                                        <state key="normal" title="XIB页面"/>
+                                        <connections>
+                                            <action selector="xibViewC:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2I9-OH-rLj"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.55214843749999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="0nB-OG-7Hd" firstAttribute="centerX" secondItem="X6J-JO-ScF" secondAttribute="centerX" id="8TU-5t-hkD"/>
+                                    <constraint firstItem="X6J-JO-ScF" firstAttribute="centerY" secondItem="gif-MK-pOp" secondAttribute="centerY" id="CqH-yw-gcf"/>
+                                    <constraint firstItem="0nB-OG-7Hd" firstAttribute="top" secondItem="X6J-JO-ScF" secondAttribute="bottom" constant="28" id="JFr-So-udQ"/>
+                                    <constraint firstItem="X6J-JO-ScF" firstAttribute="centerX" secondItem="gif-MK-pOp" secondAttribute="centerX" id="mt5-Gk-a57"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gif-MK-pOp" secondAttribute="bottom" id="BZJ-mA-XO9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gif-MK-pOp" secondAttribute="trailing" id="IGU-ny-u6a"/>
+                            <constraint firstItem="gif-MK-pOp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="kHf-nD-UHA"/>
+                            <constraint firstItem="gif-MK-pOp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="qBV-VK-VBJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="lOl-Nm-RIe"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="420" y="26.408450704225352"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="EFR-NA-Ang">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cct-Eq-tt6" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="pXB-ap-vWb">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="lYw-UR-V60"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TJs-IB-pgP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1256" y="-33"/>
+        </scene>
+    </scenes>
+</document>
