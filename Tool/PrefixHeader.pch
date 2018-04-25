@@ -65,5 +65,6 @@
 //配置常量
 #define WXDoctor_App_ID @"wxd1931d4a0e462***"  // 注册微信时的AppID
 #import "AppDelegate.h"
+#import "ToolHeader.h"
 
 #endif /* PrefixHeader_pch */

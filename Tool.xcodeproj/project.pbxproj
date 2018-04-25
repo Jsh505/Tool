@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0FC281A41F239D3100A1E57B /* Unichain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FC281A31F239D3100A1E57B /* Unichain.framework */; };
 		0FC8A3FC1E84EE0A008D53BB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FC8A3FB1E84EE0A008D53BB /* main.m */; };
 		0FC8A3FF1E84EE0A008D53BB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FC8A3FE1E84EE0A008D53BB /* AppDelegate.m */; };
 		0FC8A4021E84EE0A008D53BB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FC8A4011E84EE0A008D53BB /* ViewController.m */; };
@@ -26,7 +25,10 @@
 		0FC8A4451E84F71C008D53BB /* NSArray+Tool.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FC8A4441E84F71C008D53BB /* NSArray+Tool.m */; };
 		0FDCAC971F20CF8B0090D12A /* ObjcRuntime.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FDCAC941F20CF8B0090D12A /* ObjcRuntime.m */; };
 		0FDCAC981F20CF8B0090D12A /* UIViewController+Tool.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FDCAC961F20CF8B0090D12A /* UIViewController+Tool.m */; };
+		A827FB342090275F0007B4EC /* UIButton+countDown.m in Sources */ = {isa = PBXBuildFile; fileRef = A827FB332090275F0007B4EC /* UIButton+countDown.m */; };
+		A827FB37209027B50007B4EC /* UITextView+YLTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = A827FB36209027B50007B4EC /* UITextView+YLTextView.m */; };
 		A88C244C1FF494F7008D5C62 /* CoustromViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A88C244B1FF494F6008D5C62 /* CoustromViewController.m */; };
+		A896BFFA2021874000EFA5D4 /* NullSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = A896BFF92021874000EFA5D4 /* NullSafe.m */; };
 		A8A486D21FB2CDFD00304451 /* UIButton+TouchOne.m in Sources */ = {isa = PBXBuildFile; fileRef = A8A486D11FB2CDFD00304451 /* UIButton+TouchOne.m */; };
 		A8A486D51FB2CEF800304451 /* UIButton+SDSetImage.m in Sources */ = {isa = PBXBuildFile; fileRef = A8A486D41FB2CEF800304451 /* UIButton+SDSetImage.m */; };
 		A8A486D81FB2CF2F00304451 /* UIImageView+SDSetImage.m in Sources */ = {isa = PBXBuildFile; fileRef = A8A486D71FB2CF2F00304451 /* UIImageView+SDSetImage.m */; };
@@ -52,7 +54,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0FC281A31F239D3100A1E57B /* Unichain.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Unichain.framework; sourceTree = "<group>"; };
 		0FC8A3F71E84EE0A008D53BB /* Tool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FC8A3FB1E84EE0A008D53BB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0FC8A3FD1E84EE0A008D53BB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -93,9 +94,14 @@
 		874624603C7F1587C96BA7A2 /* Pods-Tool.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tool.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tool/Pods-Tool.debug.xcconfig"; sourceTree = "<group>"; };
 		88B86684995D568AB0693603 /* Pods-Tool.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tool.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tool/Pods-Tool.release.xcconfig"; sourceTree = "<group>"; };
 		9E1E4E5887B8047B4E7EBF6B /* Pods_Tool.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tool.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A827FB322090275E0007B4EC /* UIButton+countDown.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+countDown.h"; sourceTree = "<group>"; };
+		A827FB332090275F0007B4EC /* UIButton+countDown.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+countDown.m"; sourceTree = "<group>"; };
+		A827FB35209027B40007B4EC /* UITextView+YLTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+YLTextView.h"; sourceTree = "<group>"; };
+		A827FB36209027B50007B4EC /* UITextView+YLTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+YLTextView.m"; sourceTree = "<group>"; };
 		A88C244A1FF494F6008D5C62 /* CoustromViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoustromViewController.h; sourceTree = "<group>"; };
 		A88C244B1FF494F6008D5C62 /* CoustromViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoustromViewController.m; sourceTree = "<group>"; };
 		A88C244D1FF49505008D5C62 /* ToolHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToolHeader.h; sourceTree = "<group>"; };
+		A896BFF92021874000EFA5D4 /* NullSafe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NullSafe.m; sourceTree = "<group>"; };
 		A8A486D01FB2CDFD00304451 /* UIButton+TouchOne.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+TouchOne.h"; sourceTree = "<group>"; };
 		A8A486D11FB2CDFD00304451 /* UIButton+TouchOne.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+TouchOne.m"; sourceTree = "<group>"; };
 		A8A486D31FB2CEF800304451 /* UIButton+SDSetImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+SDSetImage.h"; sourceTree = "<group>"; };
@@ -111,7 +117,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0FC281A41F239D3100A1E57B /* Unichain.framework in Frameworks */,
 				EA08A00297878EE9C894E0B9 /* Pods_Tool.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -158,8 +163,7 @@
 		0FC8A3F91E84EE0A008D53BB /* Tool */ = {
 			isa = PBXGroup;
 			children = (
-				0FC281A31F239D3100A1E57B /* Unichain.framework */,
-				0FC8A42D1E84EE41008D53BB /* New Group */,
+				A827FB31209026830007B4EC /* Category */,
 				0FC8A3FD1E84EE0A008D53BB /* AppDelegate.h */,
 				0FC8A3FE1E84EE0A008D53BB /* AppDelegate.m */,
 				0FC8A4001E84EE0A008D53BB /* ViewController.h */,
@@ -200,9 +204,10 @@
 			path = ToolUITests;
 			sourceTree = "<group>";
 		};
-		0FC8A42D1E84EE41008D53BB /* New Group */ = {
+		A827FB31209026830007B4EC /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				A896BFF92021874000EFA5D4 /* NullSafe.m */,
 				0FC8A42E1E84EE63008D53BB /* NSString+Tool.h */,
 				0FC8A42F1E84EE63008D53BB /* NSString+Tool.m */,
 				0FC8A4401E84F53D008D53BB /* NSMutableString+Tool.h */,
@@ -233,9 +238,13 @@
 				A8A486DA1FB2CFD500304451 /* UIScrollView+EmptyDataSet.m */,
 				A88C244A1FF494F6008D5C62 /* CoustromViewController.h */,
 				A88C244B1FF494F6008D5C62 /* CoustromViewController.m */,
+				A827FB322090275E0007B4EC /* UIButton+countDown.h */,
+				A827FB332090275F0007B4EC /* UIButton+countDown.m */,
+				A827FB35209027B40007B4EC /* UITextView+YLTextView.h */,
+				A827FB36209027B50007B4EC /* UITextView+YLTextView.m */,
 				A88C244D1FF49505008D5C62 /* ToolHeader.h */,
 			);
-			name = "New Group";
+			path = Category;
 			sourceTree = "<group>";
 		};
 		BFF72780CB8F2FFAFA44FAFB /* Frameworks */ = {
@@ -416,10 +425,17 @@
 				"${BUILT_PRODUCTS_DIR}/AvoidCrash/AvoidCrash.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
 				"${BUILT_PRODUCTS_DIR}/JSONModel/JSONModel.framework",
+				"${BUILT_PRODUCTS_DIR}/KSGuaidView/KSGuaidView.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
-				"${BUILT_PRODUCTS_DIR}/QBImagePickerController/QBImagePickerController.framework",
+				"${BUILT_PRODUCTS_DIR}/MXNavigationBarManager/MXNavigationBarManager.framework",
+				"${BUILT_PRODUCTS_DIR}/PYSearch/PYSearch.framework",
+				"${BUILT_PRODUCTS_DIR}/RxWebViewController/RxWebViewController.framework",
+				"${BUILT_PRODUCTS_DIR}/SDAutoLayout/SDAutoLayout.framework",
+				"${BUILT_PRODUCTS_DIR}/SDCycleScrollView/SDCycleScrollView.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/TTTAttributedLabel/TTTAttributedLabel.framework",
+				"${BUILT_PRODUCTS_DIR}/YUSegment/YUSegment.framework",
 				"${BUILT_PRODUCTS_DIR}/YYCache/YYCache.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -428,10 +444,17 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AvoidCrash.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSONModel.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KSGuaidView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/QBImagePickerController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MXNavigationBarManager.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PYSearch.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxWebViewController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDAutoLayout.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDCycleScrollView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TTTAttributedLabel.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YUSegment.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYCache.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -465,12 +488,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				A8A486D81FB2CF2F00304451 /* UIImageView+SDSetImage.m in Sources */,
+				A827FB342090275F0007B4EC /* UIButton+countDown.m in Sources */,
 				A8A486D21FB2CDFD00304451 /* UIButton+TouchOne.m in Sources */,
 				0FC8A4021E84EE0A008D53BB /* ViewController.m in Sources */,
 				0FC8A3FF1E84EE0A008D53BB /* AppDelegate.m in Sources */,
 				A8A486D51FB2CEF800304451 /* UIButton+SDSetImage.m in Sources */,
+				A896BFFA2021874000EFA5D4 /* NullSafe.m in Sources */,
 				0FC8A43F1E84F266008D53BB /* NSDictionary+Tool.m in Sources */,
 				0FC8A43C1E84F12E008D53BB /* UIView+Tool.m in Sources */,
+				A827FB37209027B50007B4EC /* UITextView+YLTextView.m in Sources */,
 				0FC8A4451E84F71C008D53BB /* NSArray+Tool.m in Sources */,
 				A88C244C1FF494F7008D5C62 /* CoustromViewController.m in Sources */,
 				0FC8A4331E84EEAC008D53BB /* UIImage+Tool.m in Sources */,
@@ -635,7 +661,7 @@
 					"$(PROJECT_DIR)/Tool",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = /Users/jiashihai/Desktop/Tool/Tool/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = /Users/jiashihai/Desktop/Tool1/Tool/PrefixHeader.pch;
 				INFOPLIST_FILE = Tool/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "lyk-Panda-travel.Tool";
@@ -654,7 +680,7 @@
 					"$(PROJECT_DIR)/Tool",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = /Users/jiashihai/Desktop/Tool/Tool/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = /Users/jiashihai/Desktop/Tool1/Tool/PrefixHeader.pch;
 				INFOPLIST_FILE = Tool/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "lyk-Panda-travel.Tool";
