@@ -38,8 +38,10 @@
         //当push的时候隐藏下边tabBar控制器
         viewController.hidesBottomBarWhenPushed = YES;
         
-        //设置导航栏左边按钮
-        viewController.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithTarget:self action:@selector(back) image:@"返回" highImage:@"返回"];
+        //设置导航栏左边按钮  设置后渐变不会变色
+//        viewController.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithTarget:self action:@selector(back) image:@"返回" highImage:@"返回"];
+        UIBarButtonItem *barButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"返回"]  style:UIBarButtonItemStylePlain target:self action:@selector(back)];
+        viewController.navigationItem.leftBarButtonItem = barButtonItem;
     }
     
     [super pushViewController:viewController animated:YES];

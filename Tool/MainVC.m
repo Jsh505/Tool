@@ -13,6 +13,7 @@
 #import "TTTAttributedLabelVC.h"
 #import "RxWebViewController.h"
 #import "MenuTableViewController.h"
+#import "ErweimaVC.h"
 
 @interface MainVC () <PYSearchViewControllerDelegate>
 
@@ -105,6 +106,8 @@
         }
         case 5:
         {
+            ErweimaVC  * vc = [[ErweimaVC alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
             break;
         }
         case 6:

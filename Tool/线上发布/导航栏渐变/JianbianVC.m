@@ -51,10 +51,10 @@ static const CGFloat headerImageHeight = 260.0f;
 - (void)initBarManager
 {
     [MXNavigationBarManager managerWithController:self];
-    [MXNavigationBarManager setBarColor:[UIColor colorWithRed:0.5 green:0.5 blue:1 alpha:1]];
-    [MXNavigationBarManager setTintColor:[UIColor colorWithRed:0.15 green:0.15 blue:0.15 alpha:1]];
+    [MXNavigationBarManager setBarColor:[UIColor mainColor]];
+    [MXNavigationBarManager setTintColor:[UIColor blackColor]];
     [MXNavigationBarManager setStatusBarStyle:UIStatusBarStyleDefault];
-    [MXNavigationBarManager setZeroAlphaOffset:-64];
+    [MXNavigationBarManager setZeroAlphaOffset:0];
     [MXNavigationBarManager setFullAlphaOffset:200];
     [MXNavigationBarManager setFullAlphaTintColor:[UIColor whiteColor]];
     [MXNavigationBarManager setFullAlphaBarStyle:UIStatusBarStyleLightContent];
@@ -63,7 +63,7 @@ static const CGFloat headerImageHeight = 260.0f;
 - (void)initBaseData
 {
     self.title = @"长草颜文字";
-    
+    self.coustromTableView.contentInset = UIEdgeInsetsMake(-JSH_NavbarAndStatusBarHeight, 0, 0, 0);
     self.coustromTableView.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
     [self.view addSubview:self.coustromTableView];
     
@@ -94,11 +94,11 @@ static const CGFloat headerImageHeight = 260.0f;
     // 图片宽度
     CGFloat yOffset = scrollView.contentOffset.y;
     // 偏移的y值
-    if(yOffset < -88)
-    {CGFloat totalOffset = headerImageHeight + ABS(yOffset) - JSH_NavbarAndStatusBarHeight;
+    if(yOffset < 0)
+    {CGFloat totalOffset = headerImageHeight + ABS(yOffset);
         CGFloat f = totalOffset / headerImageHeight;
         //拉伸后的图片的frame应该是同比例缩放。
-        self.headerImageView.frame =  CGRectMake(- (width *f-width) / 2, yOffset + JSH_NavbarAndStatusBarHeight, width * f, totalOffset);
+        self.headerImageView.frame =  CGRectMake(- (width *f-width) / 2, yOffset, width * f, totalOffset);
         NSLog(@"we=%f,he=%f",width * f,totalOffset)
     }
 }

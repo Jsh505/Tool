@@ -56,6 +56,8 @@
 		A8EB6921209163FE0043E1FF /* GradientTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8EB6919209163FE0043E1FF /* GradientTableViewController.m */; };
 		A8EB6922209163FE0043E1FF /* TranslateTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8EB691C209163FE0043E1FF /* TranslateTableViewController.m */; };
 		A8EB69252091709D0043E1FF /* JianbianVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A8EB69242091709D0043E1FF /* JianbianVC.m */; };
+		A8EB69342091AF9B0043E1FF /* ErweimaVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A8EB69322091AF9B0043E1FF /* ErweimaVC.m */; };
+		A8EB69352091AF9B0043E1FF /* ErweimaVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8EB69332091AF9B0043E1FF /* ErweimaVC.xib */; };
 		EA08A00297878EE9C894E0B9 /* Pods_Tool.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E1E4E5887B8047B4E7EBF6B /* Pods_Tool.framework */; };
 /* End PBXBuildFile section */
 
@@ -176,6 +178,9 @@
 		A8EB691D209163FE0043E1FF /* MutationTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MutationTableViewController.h; sourceTree = "<group>"; };
 		A8EB69232091709D0043E1FF /* JianbianVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JianbianVC.h; sourceTree = "<group>"; };
 		A8EB69242091709D0043E1FF /* JianbianVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JianbianVC.m; sourceTree = "<group>"; };
+		A8EB69312091AF9B0043E1FF /* ErweimaVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ErweimaVC.h; sourceTree = "<group>"; };
+		A8EB69322091AF9B0043E1FF /* ErweimaVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ErweimaVC.m; sourceTree = "<group>"; };
+		A8EB69332091AF9B0043E1FF /* ErweimaVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ErweimaVC.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -395,6 +400,7 @@
 				A8EB68F820907D710043E1FF /* 用户协议 */,
 				A8EB68FF209082230043E1FF /* 网页浏览 */,
 				A8EB69002090891A0043E1FF /* 导航栏渐变 */,
+				A8EB69262091ABF20043E1FF /* 二维码 */,
 			);
 			path = "线上发布";
 			sourceTree = "<group>";
@@ -450,6 +456,16 @@
 				A8EB6912209163F20043E1FF /* MXNavigationBarManager.m */,
 			);
 			path = MXNavigationBarManager;
+			sourceTree = "<group>";
+		};
+		A8EB69262091ABF20043E1FF /* 二维码 */ = {
+			isa = PBXGroup;
+			children = (
+				A8EB69312091AF9B0043E1FF /* ErweimaVC.h */,
+				A8EB69322091AF9B0043E1FF /* ErweimaVC.m */,
+				A8EB69332091AF9B0043E1FF /* ErweimaVC.xib */,
+			);
+			path = "二维码";
 			sourceTree = "<group>";
 		};
 		BFF72780CB8F2FFAFA44FAFB /* Frameworks */ = {
@@ -581,6 +597,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8EB69352091AF9B0043E1FF /* ErweimaVC.xib in Resources */,
 				A8979547209054DA00CEEE58 /* MainVC.xib in Resources */,
 				0FC8A40A1E84EE0A008D53BB /* LaunchScreen.storyboard in Resources */,
 				A897953620904B6100CEEE58 /* MBProgressHUD+JDragon.bundle in Resources */,
@@ -711,6 +728,7 @@
 				A897953720904B6100CEEE58 /* MBProgressHUD+JDragon.m in Sources */,
 				A896BFFA2021874000EFA5D4 /* NullSafe.m in Sources */,
 				0FC8A43F1E84F266008D53BB /* NSDictionary+Tool.m in Sources */,
+				A8EB69342091AF9B0043E1FF /* ErweimaVC.m in Sources */,
 				0FC8A43C1E84F12E008D53BB /* UIView+Tool.m in Sources */,
 				A8EB6921209163FE0043E1FF /* GradientTableViewController.m in Sources */,
 				A8EB68F720907AD20043E1FF /* SDCycleScrollViewVC.m in Sources */,

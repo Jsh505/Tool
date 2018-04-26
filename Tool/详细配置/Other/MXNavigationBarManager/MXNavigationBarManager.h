@@ -11,13 +11,13 @@
 
 @interface MXNavigationBarManager : NSObject
 
-@property (nonatomic, strong) UIColor *barColor; //NavigationBar background color, default is white
-@property (nonatomic, strong) UIColor *tintColor; //NavigationBar subviews color
-@property (nonatomic, strong) UIImage *backgroundImage; //default is nil
+@property (nonatomic, strong) UIColor *barColor; //背景色 默认白色NavigationBar background color, default is white
+@property (nonatomic, strong) UIColor *tintColor; //子控件颜色 NavigationBar subviews color
+@property (nonatomic, strong) UIImage *backgroundImage; //背景图片 default is nil
 @property (nonatomic, assign) UIStatusBarStyle statusBarStyle; // default is UIStatusBarStyleDefault
 
-@property (nonatomic, assign) float zeroAlphaOffset;//color will changed begin this offset, default is -64
-@property (nonatomic, assign) float fullAlphaOffset;//color alpha will be 1 in this offset, default is 200
+@property (nonatomic, assign) float zeroAlphaOffset;//颜色将改变从此偏移量，默认值为-64。color will changed begin this offset, default is -64
+@property (nonatomic, assign) float fullAlphaOffset;//在这个偏移中，颜色alpha将为1，默认值为200。 color alpha will be 1 in this offset, default is 200
 @property (nonatomic, assign) float minAlphaValue;//bar minAlpha, default is 0
 @property (nonatomic, assign) float maxAlphaValue;//bar maxAlpha, default is 1
 
