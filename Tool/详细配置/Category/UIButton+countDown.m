@@ -59,7 +59,7 @@
     
     self.enabled=NO;
     self.displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(countDown)];
-    self.displayLink.frameInterval=60;
+    self.displayLink.frameInterval = 60;
     
     [self.displayLink  addToRunLoop: [NSRunLoop currentRunLoop] forMode:NSRunLoopCommonModes];
     

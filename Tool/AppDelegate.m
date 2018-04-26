@@ -7,7 +7,9 @@
 //
 
 #import "AppDelegate.h"
-#import "AvoidCrash.h"
+#import <IQKeyboardManager/IQKeyboardManager.h>
+#import "ZLTabBarViewController.h"
+#import <KSGuaidView/KSGuaidViewManager.h>
 
 @interface AppDelegate ()
 
@@ -15,29 +17,73 @@
 
 @implementation AppDelegate
 
++ (instancetype)delegate
+{
+    return (AppDelegate *)[UIApplication sharedApplication].delegate;
+}
+
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
 
-//    --------------------------------------------------分割线--------------------------------------------------
+    self.window = [[UIWindow alloc] init];
+    self.window.frame = [UIScreen mainScreen].bounds;
     
-    //启动防止崩溃功能
-    [AvoidCrash makeAllEffective];
-    //监听通知:AvoidCrashNotification, 获取AvoidCrash捕获的崩溃日志的详细信息
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(dealwithCrashMessage:) name:AvoidCrashNotification object:nil];
+    [self goHome];
     
-//    --------------------------------------------------分割线--------------------------------------------------
+//    --------------------------------------------------键盘处理--------------------------------------------------
+    [self configureBoardManager];
+    
+//    --------------------------------------------------引导页--------------------------------------------------
+    [self configureKSGuaidManager];
+    
     
     return YES;
 }
 
-#pragma mark - 报错处理
-- (void)dealwithCrashMessage:(NSNotification *)note {
+#pragma mark - 基础条件配置
+-(void)configureBoardManager
+{
+    IQKeyboardManager *manager = [IQKeyboardManager sharedManager];
+    manager.enable = YES;
+    manager.shouldResignOnTouchOutside = YES;
+    manager.shouldToolbarUsesTextFieldTintColor = YES;
+    manager.keyboardDistanceFromTextField=60;
+    manager.enableAutoToolbar = NO;
     
-    //注意:所有的信息都在userInfo中
-    //你可以在这里收集相应的崩溃信息进行相应的处理(比如传到自己服务器)
-    NSLog(@"\n\n在AppDelegate中 方法:dealwithCrashMessage打印\n\n\n\n\n%@\n\n\n\n",note.userInfo);
+    [[UITextField appearance] setTintColor:[UIColor mainColor]];  //改变光标颜色
 }
+
+-(void)configureKSGuaidManager
+{
+    KSGuaidManager.images = @[[UIImage imageNamed:@"01找工作"],
+                              [UIImage imageNamed:@"02爱学习"],
+                              [UIImage imageNamed:@"03交朋友"],
+                              [UIImage imageNamed:@"04乐生活"]];
+    
+    CGSize size = [UIScreen mainScreen].bounds.size;
+    KSGuaidManager.dismissButtonCenter = CGPointMake(size.width / 2, size.height - 80);
+    
+    KSGuaidManager.dismissButtonImage = [UIImage imageNamed:@"立即体验"];
+    
+    [KSGuaidManager begin];
+}
+
+- (void)goLogin
+{
+    //登录
+    
+}
+
+- (void)goHome
+{
+    //主页
+    ZLTabBarViewController *tabBarViewContr = [[ZLTabBarViewController alloc] init];
+    self.window.rootViewController = tabBarViewContr;
+    [self.window makeKeyAndVisible];
+}
+
+
 
 
 

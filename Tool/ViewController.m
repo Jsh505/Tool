@@ -19,15 +19,6 @@
     
     self.view.backgroundColor = [UIColor whiteColor];
     
-    UIButton * button = [UIButton buttonWithType:UIButtonTypeCustom];
-    button.frame = CGRectMake(100, 100, 200, 200);
-    [button setTitle:@"新添加的按钮" forState: UIControlStateNormal];
-    button.backgroundColor = [UIColor redColor];
-    [button addTarget:self action:@selector(buttonClicked) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:button];
-    
-    NSString * str = [NSNull null];
-    [button setTitle:str forState:UIControlStateNormal];
 }
 
 
