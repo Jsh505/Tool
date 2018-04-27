@@ -14,6 +14,8 @@
 #import "RxWebViewController.h"
 #import "MenuTableViewController.h"
 #import "ErweimaVC.h"
+#import "SegmentedControlVC.h"
+#import "RedBadgeVC.h"
 
 @interface MainVC () <PYSearchViewControllerDelegate>
 
@@ -34,7 +36,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 9;
+    return 8;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -50,7 +52,7 @@
     {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
-    cell.textLabel.text = @[@"搜索操作",@"轮播图",@"用户协议",@"浏览器",@"导航栏渐变",@"二维码扫描",@"选项卡",@"评分功能",@"提示红点"][indexPath.row];
+    cell.textLabel.text = @[@"搜索操作",@"轮播图",@"用户协议",@"浏览器",@"导航栏渐变",@"二维码扫描",@"选项卡",@"提示红点"][indexPath.row];
     return cell;
 }
 
@@ -106,12 +108,20 @@
         }
         case 5:
         {
-            ErweimaVC  * vc = [[ErweimaVC alloc] init];
+            ErweimaVC * vc = [[ErweimaVC alloc] init];
             [self.navigationController pushViewController:vc animated:YES];
             break;
         }
         case 6:
         {
+            SegmentedControlVC * vc = [[SegmentedControlVC alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
+            break;
+        }
+        case 7:
+        {
+            RedBadgeVC * vc = [[RedBadgeVC alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
             break;
         }
             

@@ -7,6 +7,11 @@
 //
 
 #import "OtherVC.h"
+#import "StartVC.h"
+#import "CountDownButtonVC.h"
+#import "GBTagListViewVC.h"
+#import "KxMenuVC.h"
+#import "ZZBrowserVC.h"
 
 @interface OtherVC ()
 
@@ -17,23 +22,76 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    UITextField * textfield = [[UITextField alloc] initWithFrame:CGRectMake(10, 20, 300, 60)];
-    [self.view addSubview:textfield];
+    self.view.backgroundColor = [UIColor whiteColor];
+    
+    self.coustromTableView.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT - JSH_NavbarAndStatusBarHeight - JSH_TabBarHeight);
+    [self.view addSubview:self.coustromTableView];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+#pragma mark UITableViewDataSource
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 5;
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 50;
 }
-*/
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString * CellIdentifier = @"CellIdentifier";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil)
+    {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    }
+    cell.textLabel.text = @[@"评分功能",@"倒计时",@"自定义标签",@"按钮下拉菜单",@"多选图片"][indexPath.row];
+    return cell;
+}
+
+#pragma mark UITableViewDelegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    switch (indexPath.row)
+    {
+        case 0:
+        {
+            StartVC * vc = [[StartVC alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
+            break;
+        }
+        case 1:
+        {
+            CountDownButtonVC * vc = [[CountDownButtonVC alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
+            break;
+        }
+        case 2:
+        {
+            GBTagListViewVC * vc = [[GBTagListViewVC alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
+            break;
+        }
+        case 3:
+        {
+            KxMenuVC * vc = [[KxMenuVC alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
+            break;
+        }
+        case 4:
+        {
+            ZZBrowserVC * vc = [[ZZBrowserVC alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
+            break;
+        }
+            
+        default:
+            break;
+    }
+}
 
 @end

@@ -6,8 +6,8 @@
 //  Copyright © 2018年 lykj. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "CoustromViewController.h"
 
-@interface OtherVC : UIViewController
+@interface OtherVC : CoustromViewController
 
 @end

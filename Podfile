@@ -39,9 +39,6 @@ pod 'HMQRCodeScanner', '~> 1.0.6'
 #选项卡
 pod 'HMSegmentedControl', '~> 1.5.4'
 
-#评分功能
-pod 'RatingBar', '~> 0.0.2'
-
 #提示红点
 pod 'WZLBadge', '~> 1.2.6'
 

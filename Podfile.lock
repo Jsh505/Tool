@@ -25,7 +25,6 @@ PODS:
     - AFNetworking (~> 3.1.0)
     - YYCache (~> 1.0.4)
   - PYSearch (0.8.8)
-  - RatingBar (0.0.2)
   - RxWebViewController (0.0.2)
   - SDAutoLayout (2.1.9)
   - SDCycleScrollView (1.75):
@@ -48,7 +47,6 @@ DEPENDENCIES:
   - MJRefresh (~> 3.1.12)
   - PPNetworkHelper
   - PYSearch (~> 0.8.8)
-  - RatingBar (~> 0.0.2)
   - RxWebViewController (~> 0.0.2)
   - SDAutoLayout (~> 2.1.3)
   - SDCycleScrollView (~> 1.75)
@@ -68,7 +66,6 @@ SPEC CHECKSUMS:
   MJRefresh: b48380ae2b927b46c4ef000de9adb8dc748e1df7
   PPNetworkHelper: 900d1af5cb9f2932b3f955ebf72148b7ec403d44
   PYSearch: aa3704f283c67667808de6df514c24df03f5f116
-  RatingBar: de58108078acfd63ccc2853d9a7efbfef42b521e
   RxWebViewController: 79bcbf51aff13d93db9779404348b052ab0cd440
   SDAutoLayout: 6b6f4db0d009dfc46cef14ef710dbb164e86616c
   SDCycleScrollView: 884b88f0266dd4708a0e1934975c69cb971707b1
@@ -77,6 +74,6 @@ SPEC CHECKSUMS:
   WZLBadge: 9ec779dcfd94c825518b395e8315fccaabff1bfa
   YYCache: 8105b6638f5e849296c71f331ff83891a4942952
 
-PODFILE CHECKSUM: 991d6c1358952f4a4dd7c114dbd4171f979e660b
+PODFILE CHECKSUM: 7644e39b1790ac7242d81614b7c54fc73a64b827
 
 COCOAPODS: 1.4.0
