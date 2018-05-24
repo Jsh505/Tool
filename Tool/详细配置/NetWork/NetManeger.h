@@ -14,7 +14,7 @@
 typedef void(^PPHttpRequestSuccess)(id responseObject);
 
 /// 请求失败的Block
-typedef void(^PPHttpRequestFailed)(NSError *error);
+typedef void(^NewPPHttpRequestFailed)(NSString *error);
 
 /// 缓存的Block
 typedef void(^PPHttpRequestCache)(id responseCache);
@@ -51,7 +51,7 @@ typedef void(^PPNetworkStatus)(PPNetworkStatusType status);
                         parameters:(id)parameters
                          hudString:(NSString *)hudString
                            success:(PPHttpRequestSuccess)success
-                           failure:(PPHttpRequestFailed)failure;
+                           failure:(NewPPHttpRequestFailed)failure;
 
 /**
  *  GET请求,自动缓存
@@ -69,7 +69,7 @@ typedef void(^PPNetworkStatus)(PPNetworkStatusType status);
                          hudString:(NSString *)hudString
                      responseCache:(PPHttpRequestCache)cache
                            success:(PPHttpRequestSuccess)success
-                           failure:(PPHttpRequestFailed)failure;
+                           failure:(NewPPHttpRequestFailed)failure;
 
 /**
  *  POST请求,无缓存
@@ -85,7 +85,7 @@ typedef void(^PPNetworkStatus)(PPNetworkStatusType status);
                          parameters:(id)parameters
                           hudString:(NSString *)hudString
                             success:(PPHttpRequestSuccess)success
-                            failure:(PPHttpRequestFailed)failure;
+                            failure:(NewPPHttpRequestFailed)failure;
 
 /**
  *  POST请求,自动缓存
@@ -103,7 +103,7 @@ typedef void(^PPNetworkStatus)(PPNetworkStatusType status);
                           hudString:(NSString *)hudString
                       responseCache:(PPHttpRequestCache)cache
                             success:(PPHttpRequestSuccess)success
-                            failure:(PPHttpRequestFailed)failure;
+                            failure:(NewPPHttpRequestFailed)failure;
 
 /**
  *  上传文件
@@ -125,7 +125,7 @@ typedef void(^PPNetworkStatus)(PPNetworkStatusType status);
                                        hudString:(NSString *)hudString
                                         progress:(PPHttpProgress)progress
                                          success:(PPHttpRequestSuccess)success
-                                         failure:(PPHttpRequestFailed)failure;
+                                         failure:(NewPPHttpRequestFailed)failure;
 
 /**
  *  上传单/多张图片
@@ -153,7 +153,7 @@ typedef void(^PPNetworkStatus)(PPNetworkStatusType status);
                                          hudString:(NSString *)hudString
                                           progress:(PPHttpProgress)progress
                                            success:(PPHttpRequestSuccess)success
-                                           failure:(PPHttpRequestFailed)failure;
+                                           failure:(NewPPHttpRequestFailed)failure;
 
 /**
  *  下载文件
@@ -170,5 +170,5 @@ typedef void(^PPNetworkStatus)(PPNetworkStatusType status);
                                        fileDir:(NSString *)fileDir
                                       progress:(PPHttpProgress)progress
                                        success:(void(^)(NSString *filePath))success
-                                       failure:(PPHttpRequestFailed)failure;
+                                       failure:(NewPPHttpRequestFailed)failure;
 @end

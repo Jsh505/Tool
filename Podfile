@@ -28,7 +28,7 @@ pod 'SDCycleScrollView', '~> 1.75'
 pod 'TTTAttributedLabel'
 
 #浏览器
-pod 'RxWebViewController', '~> 0.0.2'
+pod 'AXWebViewController', '~> 0.7.2'
 
 #导航栏渐变  不是最新的
 #pod 'MXNavigationBarManager' 
@@ -38,6 +38,7 @@ pod 'HMQRCodeScanner', '~> 1.0.6'
 
 #选项卡
 pod 'HMSegmentedControl', '~> 1.5.4'
+pod 'LTScrollView', '~> 0.1.5'
 
 #提示红点
 pod 'WZLBadge', '~> 1.2.6'

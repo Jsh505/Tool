@@ -79,6 +79,24 @@ static inline NSRegularExpression * NameRegularExpression()
     //设置链接的url
     [label addLinkToURL:url withRange:linkRange];
     [self.view addSubview:label];
+    
+    /*
+     NSString * text = @"点击“立即注册”即同意《供应链商城注册协议》";
+     _ruleLable = [[TTTAttributedLabel alloc] initWithFrame:CGRectMake(0, 0, self.ruleView.width, self.ruleView.height)];
+     _ruleLable.textColor = [UIColor colorWithHexString:@"999999"];
+     NSMutableAttributedString *atributeStr = [[NSMutableAttributedString alloc] initWithString:text attributes:@{
+     NSForegroundColorAttributeName:[UIColor colorWithHexString:@"999999"],
+     NSFontAttributeName :[UIFont systemFontOfSize:10]
+     }];
+     _ruleLable.text = atributeStr;
+     _ruleLable.font = [UIFont systemFontOfSize:10];
+     _ruleLable.numberOfLines = 1;
+     _ruleLable.linkAttributes = @{NSForegroundColorAttributeName:[UIColor colorWithHexString:@"13C243"], NSFontAttributeName:[UIFont systemFontOfSize:10]};
+     _ruleLable.activeLinkAttributes = @{NSForegroundColorAttributeName:[UIColor colorWithHexString:@"13C243"], NSFontAttributeName:[UIFont systemFontOfSize:10]};
+     NSRange serviceRange = [text rangeOfString:@"《供应链商城注册协议》"];
+     _ruleLable.delegate = self;
+     [_ruleLable addLinkToURL:[NSURL URLWithString:@""] withRange:serviceRange];
+     */
 }
 
 

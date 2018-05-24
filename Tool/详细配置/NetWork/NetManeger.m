@@ -19,27 +19,27 @@
 
 + (void)initialize
 {
-//    [PPNetworkHelper networkStatusWithBlock:^(PPNetworkStatusType status)
-//     {
-//        switch (status) {
-//            case AFNetworkReachabilityStatusUnknown:
-//                //未知网络
-//                break;
-//            case AFNetworkReachabilityStatusNotReachable:
-//                //无网络
-//                break;
-//            case AFNetworkReachabilityStatusReachableViaWWAN:
-//                //手机自带网络
-//                break;
-//            case AFNetworkReachabilityStatusReachableViaWiFi:
-//                //WIFI
-//                break;
-//        }
-//    }];
+    //    [PPNetworkHelper networkStatusWithBlock:^(PPNetworkStatusType status)
+    //     {
+    //        switch (status) {
+    //            case AFNetworkReachabilityStatusUnknown:
+    //                //未知网络
+    //                break;
+    //            case AFNetworkReachabilityStatusNotReachable:
+    //                //无网络
+    //                break;
+    //            case AFNetworkReachabilityStatusReachableViaWWAN:
+    //                //手机自带网络
+    //                break;
+    //            case AFNetworkReachabilityStatusReachableViaWiFi:
+    //                //WIFI
+    //                break;
+    //        }
+    //    }];
     [PPNetworkHelper setRequestSerializer:PPRequestSerializerJSON];
     [PPNetworkHelper setResponseSerializer:PPResponseSerializerJSON];
     [PPNetworkHelper setRequestTimeoutInterval:15];
-//    [PPNetworkHelper setValue:<#(NSString *)#> forHTTPHeaderField:<#(NSString *)#>]
+    //    [PPNetworkHelper setValue:<#(NSString *)#> forHTTPHeaderField:<#(NSString *)#>]
     [PPNetworkHelper openNetworkActivityIndicator:NO];
     [PPNetworkHelper openLog];
 }
@@ -71,37 +71,37 @@
                         parameters:(id)parameters
                          hudString:(NSString *)hudString
                            success:(PPHttpRequestSuccess)success
-                           failure:(PPHttpRequestFailed)failure
+                           failure:(NewPPHttpRequestFailed)failure
 {
     if (![NSObject is_NulllWithObject:hudString])
     {
         [MBProgressHUD showActivityMessageInWindow:hudString];
     }
-    
+    NSLog(@"GET api:%@ \n dic:%@",[NSString stringWithFormat:@"%@%@",APIEHEAD,URL],parameters);
     return [PPNetworkHelper GET:[NSString stringWithFormat:@"%@%@",APIEHEAD,URL] parameters:parameters success:^(id responseObject)
-     {
-         if (![NSString is_NulllWithObject:hudString])
-         {
-             [MBProgressHUD hideHUD];
-         }
-         
-         if ([[responseObject objectForKey:NETWORKSUCCESSKEY] intValue] == NETWORKSUCCESSCODE)
-         {
-             success([responseObject objectForKey:NETWORKDATAKEY]);
-         }
-         else
-         {
-             failure([responseObject objectForKey:NETWORKFAILUREDATAKEY]);
-         }
-    } failure:^(NSError *error)
-     {
-         if (![NSString is_NulllWithObject:hudString])
-         {
-             [MBProgressHUD hideHUD];
-         }
-         
-         failure(error);
-    }];
+            {
+                if (![NSString is_NulllWithObject:hudString])
+                {
+                    [MBProgressHUD hideHUD];
+                }
+                
+                if ([[responseObject objectForKey:NETWORKSUCCESSKEY] intValue] == NETWORKSUCCESSCODE)
+                {
+                    success([responseObject objectForKey:NETWORKDATAKEY]);
+                }
+                else
+                {
+                    failure([responseObject objectForKey:NETWORKFAILUREDATAKEY]);
+                }
+            } failure:^(NSError *error)
+            {
+                if (![NSString is_NulllWithObject:hudString])
+                {
+                    [MBProgressHUD hideHUD];
+                }
+                
+                failure(error.localizedDescription);
+            }];
 }
 
 /**
@@ -120,49 +120,49 @@
                          hudString:(NSString *)hudString
                      responseCache:(PPHttpRequestCache)cache
                            success:(PPHttpRequestSuccess)success
-                           failure:(PPHttpRequestFailed)failure
+                           failure:(NewPPHttpRequestFailed)failure
 {
     if (![NSObject is_NulllWithObject:hudString])
     {
         [MBProgressHUD showActivityMessageInWindow:hudString];
     }
-    
+    NSLog(@"GET api:%@ \n dic:%@",[NSString stringWithFormat:@"%@%@",APIEHEAD,URL],parameters);
     return [PPNetworkHelper GET:[NSString stringWithFormat:@"%@%@",APIEHEAD,URL] parameters:parameters responseCache:^(id responseCache)
-     {
-         if (![NSString is_NulllWithObject:hudString])
-         {
-             [MBProgressHUD hideHUD];
-         }
-         
-         if ([[responseCache objectForKey:NETWORKSUCCESSKEY] intValue] == NETWORKSUCCESSCODE)
-         {
-             cache([responseCache objectForKey:NETWORKDATAKEY]);
-         }
-         
-    } success:^(id responseObject)
-     {
-         if (![NSString is_NulllWithObject:hudString])
-         {
-             [MBProgressHUD hideHUD];
-         }
-         
-         if ([[responseObject objectForKey:NETWORKSUCCESSKEY] intValue] == NETWORKSUCCESSCODE)
-         {
-             success([responseObject objectForKey:NETWORKDATAKEY]);
-         }
-         else
-         {
-             failure([responseObject objectForKey:NETWORKFAILUREDATAKEY]);
-         }
-     } failure:^(NSError *error)
-     {
-         if (![NSString is_NulllWithObject:hudString])
-         {
-             [MBProgressHUD hideHUD];
-         }
-         
-         failure(error);
-     }];
+            {
+                if (![NSString is_NulllWithObject:hudString])
+                {
+                    [MBProgressHUD hideHUD];
+                }
+                
+                if ([[responseCache objectForKey:NETWORKSUCCESSKEY] intValue] == NETWORKSUCCESSCODE)
+                {
+                    cache([responseCache objectForKey:NETWORKDATAKEY]);
+                }
+                
+            } success:^(id responseObject)
+            {
+                if (![NSString is_NulllWithObject:hudString])
+                {
+                    [MBProgressHUD hideHUD];
+                }
+                
+                if ([[responseObject objectForKey:NETWORKSUCCESSKEY] intValue] == NETWORKSUCCESSCODE)
+                {
+                    success([responseObject objectForKey:NETWORKDATAKEY]);
+                }
+                else
+                {
+                    failure([responseObject objectForKey:NETWORKFAILUREDATAKEY]);
+                }
+            } failure:^(NSError *error)
+            {
+                if (![NSString is_NulllWithObject:hudString])
+                {
+                    [MBProgressHUD hideHUD];
+                }
+                
+                failure(error.localizedDescription);
+            }];
 }
 
 /**
@@ -179,37 +179,36 @@
                          parameters:(id)parameters
                           hudString:(NSString *)hudString
                             success:(PPHttpRequestSuccess)success
-                            failure:(PPHttpRequestFailed)failure
+                            failure:(NewPPHttpRequestFailed)failure
 {
     if (![NSObject is_NulllWithObject:hudString])
     {
         [MBProgressHUD showActivityMessageInWindow:hudString];
     }
-    
+    NSLog(@"POST api:%@ \n dic:%@",[NSString stringWithFormat:@"%@%@",APIEHEAD,URL],parameters);
     return [PPNetworkHelper POST:[NSString stringWithFormat:@"%@%@",APIEHEAD,URL] parameters:parameters success:^(id responseObject)
-     {
-         if (![NSString is_NulllWithObject:hudString])
-         {
-             [MBProgressHUD hideHUD];
-         }
-         
-         if ([[responseObject objectForKey:NETWORKSUCCESSKEY] intValue] == NETWORKSUCCESSCODE)
-         {
-             success([responseObject objectForKey:NETWORKDATAKEY]);
-         }
-         else
-         {
-             failure([responseObject objectForKey:NETWORKFAILUREDATAKEY]);
-         }
-     } failure:^(NSError *error)
-     {
-         if (![NSString is_NulllWithObject:hudString])
-         {
-             [MBProgressHUD hideHUD];
-         }
-         
-         failure(error);
-     }];
+            {
+                if (![NSString is_NulllWithObject:hudString])
+                {
+                    [MBProgressHUD hideHUD];
+                }
+                
+                if ([[responseObject objectForKey:NETWORKSUCCESSKEY] intValue] == NETWORKSUCCESSCODE)
+                {
+                    success([responseObject objectForKey:NETWORKDATAKEY]);
+                }
+                else
+                {
+                    failure([responseObject objectForKey:NETWORKFAILUREDATAKEY]);
+                }
+            } failure:^(NSError *error)
+            {
+                if (![NSString is_NulllWithObject:hudString])
+                {
+                    [MBProgressHUD hideHUD];
+                }
+                failure(error.localizedDescription);
+            }];
 }
 
 /**
@@ -228,49 +227,49 @@
                           hudString:(NSString *)hudString
                       responseCache:(PPHttpRequestCache)cache
                             success:(PPHttpRequestSuccess)success
-                            failure:(PPHttpRequestFailed)failure
+                            failure:(NewPPHttpRequestFailed)failure
 {
     if (![NSObject is_NulllWithObject:hudString])
     {
         [MBProgressHUD showActivityMessageInWindow:hudString];
     }
-    
+    NSLog(@"POST api:%@ \n dic:%@",[NSString stringWithFormat:@"%@%@",APIEHEAD,URL],parameters);
     return [PPNetworkHelper POST:[NSString stringWithFormat:@"%@%@",APIEHEAD,URL] parameters:parameters responseCache:^(id responseCache)
-     {
-         if (![NSString is_NulllWithObject:hudString])
-         {
-             [MBProgressHUD hideHUD];
-         }
-         
-         if ([[responseCache objectForKey:NETWORKSUCCESSKEY] intValue] == NETWORKSUCCESSCODE)
-         {
-             cache([responseCache objectForKey:NETWORKDATAKEY]);
-         }
-         
-     } success:^(id responseObject)
-     {
-         if (![NSString is_NulllWithObject:hudString])
-         {
-             [MBProgressHUD hideHUD];
-         }
-         
-         if ([[responseObject objectForKey:NETWORKSUCCESSKEY] intValue] == NETWORKSUCCESSCODE)
-         {
-             success([responseObject objectForKey:NETWORKDATAKEY]);
-         }
-         else
-         {
-             failure([responseObject objectForKey:NETWORKFAILUREDATAKEY]);
-         }
-     } failure:^(NSError *error)
-     {
-         if (![NSString is_NulllWithObject:hudString])
-         {
-             [MBProgressHUD hideHUD];
-         }
-         
-         failure(error);
-     }];
+            {
+                if (![NSString is_NulllWithObject:hudString])
+                {
+                    [MBProgressHUD hideHUD];
+                }
+                
+                if ([[responseCache objectForKey:NETWORKSUCCESSKEY] intValue] == NETWORKSUCCESSCODE)
+                {
+                    cache([responseCache objectForKey:NETWORKDATAKEY]);
+                }
+                
+            } success:^(id responseObject)
+            {
+                if (![NSString is_NulllWithObject:hudString])
+                {
+                    [MBProgressHUD hideHUD];
+                }
+                
+                if ([[responseObject objectForKey:NETWORKSUCCESSKEY] intValue] == NETWORKSUCCESSCODE)
+                {
+                    success([responseObject objectForKey:NETWORKDATAKEY]);
+                }
+                else
+                {
+                    failure([responseObject objectForKey:NETWORKFAILUREDATAKEY]);
+                }
+            } failure:^(NSError *error)
+            {
+                if (![NSString is_NulllWithObject:hudString])
+                {
+                    [MBProgressHUD hideHUD];
+                }
+                
+                failure(error.localizedDescription);
+            }];
 }
 
 
@@ -294,32 +293,37 @@
                                        hudString:(NSString *)hudString
                                         progress:(PPHttpProgress)progress
                                          success:(PPHttpRequestSuccess)success
-                                         failure:(PPHttpRequestFailed)failure
+                                         failure:(NewPPHttpRequestFailed)failure
 {
+    if (![NSObject is_NulllWithObject:hudString])
+    {
+        [MBProgressHUD showActivityMessageInWindow:hudString];
+    }
+    NSLog(@"uploadFileWithURL api:%@ \n dic:%@",[NSString stringWithFormat:@"%@%@",APIEHEAD,URL],parameters);
     return [PPNetworkHelper uploadFileWithURL:[NSString stringWithFormat:@"%@%@",APIEHEAD,URL] parameters:parameters name:name filePath:filePath progress:progress success:^(id responseObject)
-     {
-        if (![NSString is_NulllWithObject:hudString])
-        {
-            [MBProgressHUD hideHUD];
-        }
-        
-        if ([[responseObject objectForKey:NETWORKSUCCESSKEY] intValue] == NETWORKSUCCESSCODE)
-        {
-            success([responseObject objectForKey:NETWORKDATAKEY]);
-        }
-        else
-        {
-            failure([responseObject objectForKey:NETWORKFAILUREDATAKEY]);
-        }
-    } failure:^(NSError *error)
-     {
-         if (![NSString is_NulllWithObject:hudString])
-         {
-             [MBProgressHUD hideHUD];
-         }
-         
-         failure(error);
-    }];
+            {
+                if (![NSString is_NulllWithObject:hudString])
+                {
+                    [MBProgressHUD hideHUD];
+                }
+                
+                if ([[responseObject objectForKey:NETWORKSUCCESSKEY] intValue] == NETWORKSUCCESSCODE)
+                {
+                    success([responseObject objectForKey:NETWORKDATAKEY]);
+                }
+                else
+                {
+                    failure([responseObject objectForKey:NETWORKFAILUREDATAKEY]);
+                }
+            } failure:^(NSError *error)
+            {
+                if (![NSString is_NulllWithObject:hudString])
+                {
+                    [MBProgressHUD hideHUD];
+                }
+                
+                failure(error.localizedDescription);
+            }];
 }
 
 /**
@@ -348,32 +352,37 @@
                                          hudString:(NSString *)hudString
                                           progress:(PPHttpProgress)progress
                                            success:(PPHttpRequestSuccess)success
-                                           failure:(PPHttpRequestFailed)failure
+                                           failure:(NewPPHttpRequestFailed)failure
 {
+    if (![NSObject is_NulllWithObject:hudString])
+    {
+        [MBProgressHUD showActivityMessageInWindow:hudString];
+    }
+    NSLog(@"uploadImagesWithURL api:%@ \n dic:%@",[NSString stringWithFormat:@"%@%@",APIEHEAD,URL],parameters);
     return [PPNetworkHelper uploadImagesWithURL:[NSString stringWithFormat:@"%@%@",APIEHEAD,URL] parameters:parameters name:name images:images fileNames:fileNames imageScale:imageScale imageType:imageType progress:progress success:^(id responseObject)
-     {
-         if (![NSString is_NulllWithObject:hudString])
-         {
-             [MBProgressHUD hideHUD];
-         }
-         
-         if ([[responseObject objectForKey:NETWORKSUCCESSKEY] intValue] == NETWORKSUCCESSCODE)
-         {
-             success([responseObject objectForKey:NETWORKDATAKEY]);
-         }
-         else
-         {
-             failure([responseObject objectForKey:NETWORKFAILUREDATAKEY]);
-         }
-     } failure:^(NSError *error)
-     {
-         if (![NSString is_NulllWithObject:hudString])
-         {
-             [MBProgressHUD hideHUD];
-         }
-         
-         failure(error);
-     }];
+            {
+                if (![NSString is_NulllWithObject:hudString])
+                {
+                    [MBProgressHUD hideHUD];
+                }
+                
+                if ([[responseObject objectForKey:NETWORKSUCCESSKEY] intValue] == NETWORKSUCCESSCODE)
+                {
+                    success([responseObject objectForKey:NETWORKDATAKEY]);
+                }
+                else
+                {
+                    failure([responseObject objectForKey:NETWORKFAILUREDATAKEY]);
+                }
+            } failure:^(NSError *error)
+            {
+                if (![NSString is_NulllWithObject:hudString])
+                {
+                    [MBProgressHUD hideHUD];
+                }
+                
+                failure(error.localizedDescription);
+            }];
 }
 
 /**
@@ -391,9 +400,15 @@
                                        fileDir:(NSString *)fileDir
                                       progress:(PPHttpProgress)progress
                                        success:(void(^)(NSString *filePath))success
-                                       failure:(PPHttpRequestFailed)failure
+                                       failure:(NewPPHttpRequestFailed)failure
 {
-    return [PPNetworkHelper downloadWithURL:[NSString stringWithFormat:@"%@%@",APIEHEAD,URL] fileDir:fileDir progress:progress success:success failure:failure];
+    return [PPNetworkHelper downloadWithURL:[NSString stringWithFormat:@"%@%@",APIEHEAD,URL] fileDir:fileDir progress:^(NSProgress *progress) {
+        
+    } success:^(NSString *filePath) {
+        
+    } failure:^(NSError *error) {
+        
+    }];
 }
 
 @end

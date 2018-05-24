@@ -14,18 +14,33 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
+  - Aspects (1.4.1)
+  - AXIndicatorView (0.1.1)
+  - AXNavigationBackItemInjection (0.0.2)
+  - AXPracticalHUD (2.0.2):
+    - AXIndicatorView
+  - AXWebViewController (0.7.2):
+    - Aspects
+    - AXNavigationBackItemInjection
+    - AXPracticalHUD
+    - NJKWebViewProgress
   - HMQRCodeScanner (1.0.6)
-  - HMSegmentedControl (1.5.4)
+  - HMSegmentedControl (1.5.5)
   - IQKeyboardManager (4.0.13)
   - JSONModel (1.7.0)
   - KSGuaidView (0.0.5)
+  - LTScrollView (0.1.5)
   - MBProgressHUD (1.1.0)
   - MJRefresh (3.1.15.3)
+  - NJKWebViewProgress (0.2.3):
+    - NJKWebViewProgress/Core (= 0.2.3)
+    - NJKWebViewProgress/ProgressView (= 0.2.3)
+  - NJKWebViewProgress/Core (0.2.3)
+  - NJKWebViewProgress/ProgressView (0.2.3)
   - PPNetworkHelper (0.8.0):
     - AFNetworking (~> 3.1.0)
     - YYCache (~> 1.0.4)
   - PYSearch (0.8.8)
-  - RxWebViewController (0.0.2)
   - SDAutoLayout (2.1.9)
   - SDCycleScrollView (1.75):
     - SDWebImage (>= 4.0.0)
@@ -38,16 +53,17 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking (~> 3.1.0)
+  - AXWebViewController (~> 0.7.2)
   - HMQRCodeScanner (~> 1.0.6)
   - HMSegmentedControl (~> 1.5.4)
   - IQKeyboardManager (~> 4.0.8)
   - JSONModel (~> 1.7.0)
   - KSGuaidView
+  - LTScrollView (~> 0.1.5)
   - MBProgressHUD (~> 1.1.0)
   - MJRefresh (~> 3.1.12)
   - PPNetworkHelper
   - PYSearch (~> 0.8.8)
-  - RxWebViewController (~> 0.0.2)
   - SDAutoLayout (~> 2.1.3)
   - SDCycleScrollView (~> 1.75)
   - SDWebImage (~> 4.2.2)
@@ -57,16 +73,22 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  Aspects: 7595ba96a6727a58ebcbfc954497fc5d2fdde546
+  AXIndicatorView: 566b490a2dd9781d4ffbcc9752be9b9cdc6e728e
+  AXNavigationBackItemInjection: efe0446967f3cbcc85a9118decd1e145138912dd
+  AXPracticalHUD: 16c3ff6d97c061e80e80897b2e6ac8e330079472
+  AXWebViewController: 96566c473fce2806f4da696132b31777f5404c9f
   HMQRCodeScanner: 8db2d317c0e5cbe3b4709fe2b9f26c107d66554e
-  HMSegmentedControl: b25bc4ec44766e073d62c473188fb354ee244b76
+  HMSegmentedControl: f514c6dad47aa3065e0ed2e8046b73efc71221b9
   IQKeyboardManager: 8eab4d8111418414619d1df8e4779ce5d0f8d7e2
   JSONModel: 840bc0fcffb24b8454d2c026bf26fea454b8e98d
   KSGuaidView: 8a208b7df4140db1c86a8bc1eb170f91b0aabf19
+  LTScrollView: e0eaae134bba74a9018cd22ba5e07bdb155340c0
   MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
   MJRefresh: b48380ae2b927b46c4ef000de9adb8dc748e1df7
+  NJKWebViewProgress: f481fd424cb5ecc27eacae11b5397db92fba9a4d
   PPNetworkHelper: 900d1af5cb9f2932b3f955ebf72148b7ec403d44
   PYSearch: aa3704f283c67667808de6df514c24df03f5f116
-  RxWebViewController: 79bcbf51aff13d93db9779404348b052ab0cd440
   SDAutoLayout: 6b6f4db0d009dfc46cef14ef710dbb164e86616c
   SDCycleScrollView: 884b88f0266dd4708a0e1934975c69cb971707b1
   SDWebImage: 791bb72962b3492327ddcac4b1880bd1b5458431
@@ -74,6 +96,6 @@ SPEC CHECKSUMS:
   WZLBadge: 9ec779dcfd94c825518b395e8315fccaabff1bfa
   YYCache: 8105b6638f5e849296c71f331ff83891a4942952
 
-PODFILE CHECKSUM: 7644e39b1790ac7242d81614b7c54fc73a64b827
+PODFILE CHECKSUM: bfc0dfc972a3a98ed21c5d4746c5bfb263aaa493
 
 COCOAPODS: 1.4.0

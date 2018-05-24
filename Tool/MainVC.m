@@ -11,11 +11,12 @@
 #import "ZLNaviContrViewController.h"
 #import "SDCycleScrollViewVC.h"
 #import "TTTAttributedLabelVC.h"
-#import "RxWebViewController.h"
 #import "MenuTableViewController.h"
 #import "ErweimaVC.h"
 #import "SegmentedControlVC.h"
 #import "RedBadgeVC.h"
+#import <AXWebViewController/AXWebViewController.h>
+#import "LTSimpleManagerDemo.h"
 
 @interface MainVC () <PYSearchViewControllerDelegate>
 
@@ -36,11 +37,14 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 8;
+    return 9;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    self.coustromTableView.rowHeight = UITableViewAutomaticDimension;
+    self.coustromTableView.estimatedRowHeight = 50;
+    return self.coustromTableView.rowHeight;
     return 50;
 }
 
@@ -52,7 +56,7 @@
     {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
-    cell.textLabel.text = @[@"搜索操作",@"轮播图",@"用户协议",@"浏览器",@"导航栏渐变",@"二维码扫描",@"选项卡",@"提示红点"][indexPath.row];
+    cell.textLabel.text = @[@"搜索操作",@"轮播图",@"用户协议",@"浏览器",@"导航栏渐变",@"二维码扫描",@"选项卡",@"提示红点",@"选项卡二"][indexPath.row];
     return cell;
 }
 
@@ -96,8 +100,9 @@
         case 3:
         {
             NSString* urlStr = @"https://www.baidu.com";
-            RxWebViewController * webViewController = [[RxWebViewController alloc]initWithUrl:[NSURL URLWithString:urlStr]];
-            [self.navigationController pushViewController:webViewController animated:YES];
+            AXWebViewController *webVC = [[AXWebViewController alloc] initWithAddress:urlStr];
+            webVC.showsToolBar = NO;
+            [self.navigationController pushViewController:webVC animated:YES];
             break;
         }
         case 4:
@@ -121,6 +126,12 @@
         case 7:
         {
             RedBadgeVC * vc = [[RedBadgeVC alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
+            break;
+        }
+        case 8:
+        {
+            LTSimpleManagerDemo * vc = [[LTSimpleManagerDemo alloc] init];
             [self.navigationController pushViewController:vc animated:YES];
             break;
         }

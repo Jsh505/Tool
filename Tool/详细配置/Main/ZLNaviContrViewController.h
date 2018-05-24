@@ -7,8 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "RxWebViewNavigationViewController.h"
 
-@interface ZLNaviContrViewController : RxWebViewNavigationViewController
+@interface ZLNaviContrViewController : UINavigationController
 
 @end

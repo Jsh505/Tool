@@ -20,9 +20,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-//    self.coustromTableView.emptyDataSetSource = self;
-//    self.coustromTableView.emptyDataSetDelegate = self;
+    
+    self.coustromTableView.emptyDataSetSource = self;
+    self.coustromTableView.emptyDataSetDelegate = self;
 }
 
 #pragma mark -- UITableView
@@ -56,7 +56,7 @@
 //图片
 - (UIImage *)imageForEmptyDataSet:(UIScrollView *)scrollView
 {
-    return Default_NoData_Image;
+    return nil;
 }
 
 //属性字符串
@@ -84,59 +84,18 @@
     return 20.0f;
 }
 
-#pragma mark MJRefresh下拉刷新
-///    添加下拉刷新
-- (void)addpull2RefreshWithTableView:(UIScrollView *)tableView WithIsInset:(BOOL)isInset
-{
-    MJRefreshNormalHeader *header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(pull2RefreshWithScrollerView:)];
-    tableView.mj_header = header;
-    _headRefreshView = tableView.mj_header;
-    [tableView.mj_header endRefreshing];
-    // 外观设置
-    // 设置文字
-    [header setTitle:@"下拉刷新..." forState:MJRefreshStateIdle];
-    [header setTitle:@"松开即刷新" forState:MJRefreshStatePulling];
-    [header setTitle:@"正在刷新..." forState:MJRefreshStateRefreshing];
-    
-    // 设置字体
-    header.stateLabel.font = [UIFont systemFontOfSize:13];
-    header.lastUpdatedTimeLabel.font = [UIFont systemFontOfSize:11];
-    // 设置颜色
-    header.stateLabel.textColor = [UIColor blackColor];
-    header.lastUpdatedTimeLabel.textColor = [UIColor grayColor];
-}
+#pragma mark 刷新
 
-///   添加上提加载
-- (void)addPush2LoadMoreWithTableView:(UITableView *)tableView WithIsInset:(BOOL)isInset
+- (void)CreatRefreshWithHeaderRefreshBlock:(MJRefreshBlock)headerBlock footerRefreshBlock:(MJRefreshBlock)footerBlock
 {
-    MJRefreshAutoNormalFooter *footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(push2LoadMoreWithScrollerView:)];
-    tableView.mj_footer = footer;
+    self.coustromTableView.mj_header= [MJRefreshNormalHeader headerWithRefreshingBlock:^ {
+        headerBlock();
+    }];
     
-    _footRefreshView = tableView.mj_footer;
-    [tableView.mj_footer endRefreshing];
-    // 设置文字
-    [footer setTitle:@"" forState:MJRefreshStateIdle];
-    [footer setTitle:@"正在加载..." forState:MJRefreshStateRefreshing];
-    [footer setTitle:@"无更多数据可供加载" forState:MJRefreshStateNoMoreData];
-    
-    // 设置字体
-    footer.stateLabel.font = [UIFont systemFontOfSize:13];
-    
-    // 设置颜色
-    footer.stateLabel.textColor = [UIColor grayColor];
-    
-}
-
-//下拉刷新
-- (void)pull2RefreshWithScrollerView:(UIScrollView *)scrollerView
-{
-    
-}
-
-//上提加载
-- (void)push2LoadMoreWithScrollerView:(UIScrollView *)scrollerView
-{
-
+    // 上拉刷新
+    self.coustromTableView.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
+        footerBlock();
+    }];
 }
 
 - (void)endRefreshing {

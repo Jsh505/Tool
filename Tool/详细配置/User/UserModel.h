@@ -7,7 +7,6 @@
 //
 
 #import "BaseModel.h"
-#import "UserInfoModel.h"
 
 @interface UserModel : BaseModel <NSCoding>
 
