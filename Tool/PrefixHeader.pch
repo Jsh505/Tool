@@ -64,10 +64,12 @@
 
 //配置常量
 #define WXDoctor_App_ID @"wxd1931d4a0e462***"  // 注册微信时的AppID
+
+/** 导入全局类型 **/
 #import "AppDelegate.h"
 #import "ToolHeader.h"
-#import "MBProgressHUD+JDragon.h"
 #import "NetManeger.h"
-
+#import "OtherHeader.h"
+#import "CoustromViewController.h"
 
 #endif /* PrefixHeader_pch */

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view alpha="0.59999999999999998" contentMode="scaleToFill" id="iN0-l3-epB" customClass="JSHHorseRaceLampView">
+            <rect key="frame" x="0.0" y="0.0" width="205" height="34"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zM0-0M-taP">
+                    <rect key="frame" x="0.0" y="0.0" width="205" height="34"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lKm-JB-6fM">
+                            <rect key="frame" x="6" y="6" width="22" height="22"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="22" id="oWh-ie-4we"/>
+                                <constraint firstAttribute="width" constant="22" id="sOk-Tg-Nft"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="11"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                            </userDefinedRuntimeAttributes>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="展示文字" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ifT-t2-Ybd">
+                            <rect key="frame" x="36" y="11" width="157" height="13.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="ifT-t2-Ybd" firstAttribute="centerY" secondItem="lKm-JB-6fM" secondAttribute="centerY" id="Jng-Qz-ndz"/>
+                        <constraint firstItem="lKm-JB-6fM" firstAttribute="centerY" secondItem="zM0-0M-taP" secondAttribute="centerY" id="XLd-6r-gu0"/>
+                        <constraint firstAttribute="trailing" secondItem="ifT-t2-Ybd" secondAttribute="trailing" constant="12" id="kyd-Pt-deg"/>
+                        <constraint firstItem="ifT-t2-Ybd" firstAttribute="leading" secondItem="lKm-JB-6fM" secondAttribute="trailing" constant="8" id="ouI-1l-VD9"/>
+                        <constraint firstItem="lKm-JB-6fM" firstAttribute="leading" secondItem="zM0-0M-taP" secondAttribute="leading" constant="6" id="xnF-Ks-o79"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="zM0-0M-taP" secondAttribute="trailing" id="AiD-AE-gGg"/>
+                <constraint firstItem="zM0-0M-taP" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="D6Y-iF-suP"/>
+                <constraint firstItem="zM0-0M-taP" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="TGX-Kb-Vjf"/>
+                <constraint firstAttribute="bottom" secondItem="zM0-0M-taP" secondAttribute="bottom" id="a8W-zs-l84"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                    <integer key="value" value="15"/>
+                </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+            </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="headerImageView" destination="lKm-JB-6fM" id="frL-Q5-WSS"/>
+                <outlet property="titleLB" destination="ifT-t2-Ybd" id="Yen-Hl-t2J"/>
+            </connections>
+            <point key="canvasLocation" x="-60.5" y="-260"/>
+        </view>
+    </objects>
+</document>

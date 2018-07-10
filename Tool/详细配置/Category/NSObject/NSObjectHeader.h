@@ -1,0 +1,17 @@
+//
+//  NSObjectHeader.h
+//  Tool
+//
+//  Created by 贾仕海 on 2018/7/10.
+//  Copyright © 2018年 lykj. All rights reserved.
+//
+
+#ifndef NSObjectHeader_h
+#define NSObjectHeader_h
+
+#import "NSObject+Runtime.h"
+#import "NSObject+Category.h"
+#import "NSObject+PerformBlock.h"
+#import "NSObject+Swizzle.h"
+
+#endif /* NSObjectHeader_h */

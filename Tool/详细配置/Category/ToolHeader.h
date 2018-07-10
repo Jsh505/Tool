@@ -9,21 +9,26 @@
 #ifndef ToolHeader_h
 #define ToolHeader_h
 
-#import "NSArray+Tool.h"
-#import "NSDictionary+Tool.h"
-#import "NSMutableString+Tool.h"
-#import "NSObject+Tool.h"
-#import "NSString+Tool.h"
-#import "UIButton+SDSetImage.h"
-#import "UIButton+TouchOne.h"
-#import "UIButton+countDown.h"
-#import "UIColor+Tool.h"
-#import "UIImage+Tool.h"
-#import "UIImageView+SDSetImage.h"
-#import "UIScrollView+EmptyDataSet.h"
-#import "UIView+Tool.h"
+
+
+#import "NSStringHeader.h"
+#import "NSAttributedStringHeader.h"
+#import "TableViewHeader.h"
+#import "NSDictionaryHeader.h"
+#import "NSArrayHeader.h"
+#import "NSObjectHeader.h"
+//#import "NSData+CommonCryptor.h" //暂时不用
+#import "UIColorHeader.h"
+#import "UIImageHeader.h"
+#import "UIButtonHeader.h"
+
+/** 打印当前视图名字 **/
 #import "UIViewController+Tool.h"
-#import "CoustromViewController.h"
+/** 加载图片设置默认图片 **/
+#import "UIImageView+SDSetImage.h"
+/** UIView基础 **/
+#import "UIView+Tool.h"
+/** TextView占位+字数 **/
 #import "UITextView+YLTextView.h"
 
 #endif /* ToolHeader_h */

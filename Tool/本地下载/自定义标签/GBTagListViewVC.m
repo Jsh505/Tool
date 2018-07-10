@@ -42,7 +42,7 @@
      {
         NSLog(@"选中的标签%@",arr);
         [weakSelf.tempTag removeFromSuperview];
-        GBTagListView*selectItems= [[GBTagListView alloc]initWithFrame:CGRectMake(0,tagList.frame.origin.y+tagList.frame.size.height+40 , SCREEN_WIDTH, 0)];
+        GBTagListView * selectItems= [[GBTagListView alloc]initWithFrame:CGRectMake(0,tagList.frame.origin.y+tagList.frame.size.height+40 , SCREEN_WIDTH, 0)];
         selectItems.signalTagColor = [UIColor whiteColor];
         selectItems.canTouch = NO;
         [selectItems setMarginBetweenTagLabel:20 AndBottomMargin:20];
@@ -50,9 +50,8 @@
         [weakSelf.view addSubview:selectItems];
         weakSelf.tempTag = selectItems;
         
-        
     }];
-    
+    NSLog(@"%f",tagList.frame.size.height);
     [self.view addSubview:tagList];
     UILabel*tip=[[UILabel alloc]initWithFrame:CGRectMake(0, tagList.frame.origin.y+tagList.frame.size.height+10, SCREEN_WIDTH, 20)];
     tip.text=@"选中的标签是：";
