@@ -9,11 +9,16 @@
 #import "NetManeger.h"
 #import "AFNetworking.h"
 
-#define NETWORKSUCCESSKEY @"code"  //网络成功关键字
-#define NETWORKSUCCESSCODE 0  //网络成功状态码
-#define NETWORKDATAKEY @"data"  //网络成功返回字段
-#define NETWORKFAILUREDATAKEY @"message"  //网络失败关返回字段
-
+/** 网络成功关键字 **/
+static NSString *const NETWORKSUCCESSKEY = @"code";
+/** 网络成功状态码 **/
+static int const NETWORKSUCCESSCODE = 0;
+/** 网络成功返回字段 **/
+static NSString *const NETWORKDATAKEY = @"data";
+/** 网络失败关返回字段 **/
+static NSString *const NETWORKFAILUREDATAKEY = @"message";
+/** 网络环境不通畅提示文字 **/
+static NSString *const NETWORKFAILUREMESSAGE = @"网络错误";
 
 @implementation NetManeger
 
@@ -56,6 +61,29 @@
     [PPNetworkHelper cancelRequestWithURL:URL];
 }
 
+/** 检测当前网络是否通畅 **/
++ (BOOL)checkNetworkConnection
+{
+    struct sockaddr zeroAddress;
+    bzero(&zeroAddress, sizeof(zeroAddress));
+    zeroAddress.sa_len = sizeof(zeroAddress);
+    zeroAddress.sa_family = AF_INET;
+    
+    SCNetworkReachabilityRef defaultRouteReachability = SCNetworkReachabilityCreateWithAddress(NULL, (struct sockaddr *)&zeroAddress);
+    SCNetworkReachabilityFlags flags;
+    
+    BOOL didRetrieveFlags = SCNetworkReachabilityGetFlags(defaultRouteReachability, &flags);
+    CFRelease(defaultRouteReachability);
+    
+    if (!didRetrieveFlags) {
+        printf("Error. Count not recover network reachability flags\n");
+        return NO;
+    }
+    
+    BOOL isReachable = flags & kSCNetworkFlagsReachable;
+    BOOL needsConnection = flags & kSCNetworkFlagsConnectionRequired;
+    return (isReachable && !needsConnection) ? YES : NO;
+}
 
 /**
  *  GET请求,无缓存
@@ -73,6 +101,16 @@
                            success:(PPHttpRequestSuccess)success
                            failure:(NewPPHttpRequestFailed)failure
 {
+    
+    /** 请求前先检测一次当前网络环境、感觉不是很必要 **/
+    /*
+    if([self checkNetworkConnection])
+    {
+        failure(NETWORKFAILUREMESSAGE);
+        return nil;
+    }
+     */
+    
     if (![NSObject is_NulllWithObject:hudString])
     {
         [MBProgressHUD showActivityMessageInWindow:hudString];
@@ -271,7 +309,6 @@
                 failure(error.localizedDescription);
             }];
 }
-
 
 /**
  *  上传文件

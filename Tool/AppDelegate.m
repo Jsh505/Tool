@@ -37,6 +37,9 @@
 //    --------------------------------------------------引导页--------------------------------------------------
     [self configureKSGuaidManager];
     
+    /** 性能检测打开 **/
+    [[WHDebugToolManager sharedInstance] toggleWith:DebugToolTypeAll];
+    
     
     return YES;
 }

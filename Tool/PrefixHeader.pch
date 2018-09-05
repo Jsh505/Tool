@@ -71,5 +71,6 @@
 #import "NetManeger.h"
 #import "OtherHeader.h"
 #import "CoustromViewController.h"
+#import "HHRefreshManager.h"
 
 #endif /* PrefixHeader_pch */

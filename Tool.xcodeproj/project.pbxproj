@@ -20,8 +20,14 @@
 		0FC8A43C1E84F12E008D53BB /* UIView+Tool.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FC8A43B1E84F12E008D53BB /* UIView+Tool.m */; };
 		0FDCAC971F20CF8B0090D12A /* ObjcRuntime.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FDCAC941F20CF8B0090D12A /* ObjcRuntime.m */; };
 		0FDCAC981F20CF8B0090D12A /* UIViewController+Tool.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FDCAC961F20CF8B0090D12A /* UIViewController+Tool.m */; };
+		A81285B32102D1F5004D891C /* WHDebugToolManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A81285AC2102D1F5004D891C /* WHDebugToolManager.m */; };
+		A81285B42102D1F5004D891C /* WHDebugCPUMemoryMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = A81285AF2102D1F5004D891C /* WHDebugCPUMemoryMonitor.m */; };
+		A81285B52102D1F5004D891C /* WHDebugFPSMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = A81285B12102D1F5004D891C /* WHDebugFPSMonitor.m */; };
+		A81285B62102D1F5004D891C /* WHDebugConsoleLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = A81285B22102D1F5004D891C /* WHDebugConsoleLabel.m */; };
 		A827FB342090275F0007B4EC /* UIButton+countDown.m in Sources */ = {isa = PBXBuildFile; fileRef = A827FB332090275F0007B4EC /* UIButton+countDown.m */; };
 		A827FB37209027B50007B4EC /* UITextView+YLTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = A827FB36209027B50007B4EC /* UITextView+YLTextView.m */; };
+		A8537565210893C200B08137 /* GuideView.m in Sources */ = {isa = PBXBuildFile; fileRef = A8537564210893C200B08137 /* GuideView.m */; };
+		A8537567210893D500B08137 /* GuideView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8537566210893D500B08137 /* GuideView.xib */; };
 		A88C244C1FF494F7008D5C62 /* CoustromViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A88C244B1FF494F6008D5C62 /* CoustromViewController.m */; };
 		A896560D20B6AA1D00969862 /* LTSimpleManagerDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = A896560A20B6AA1D00969862 /* LTSimpleManagerDemo.m */; };
 		A896560E20B6AA1D00969862 /* LTSimpleTestOneVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A896560B20B6AA1D00969862 /* LTSimpleTestOneVC.m */; };
@@ -184,10 +190,21 @@
 		874624603C7F1587C96BA7A2 /* Pods-Tool.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tool.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tool/Pods-Tool.debug.xcconfig"; sourceTree = "<group>"; };
 		88B86684995D568AB0693603 /* Pods-Tool.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tool.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tool/Pods-Tool.release.xcconfig"; sourceTree = "<group>"; };
 		9E1E4E5887B8047B4E7EBF6B /* Pods_Tool.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tool.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A81285AB2102D1F5004D891C /* WHDebugCPUMemoryMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHDebugCPUMemoryMonitor.h; sourceTree = "<group>"; };
+		A81285AC2102D1F5004D891C /* WHDebugToolManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHDebugToolManager.m; sourceTree = "<group>"; };
+		A81285AD2102D1F5004D891C /* WHDebugConsoleLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHDebugConsoleLabel.h; sourceTree = "<group>"; };
+		A81285AE2102D1F5004D891C /* WHDebugFPSMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHDebugFPSMonitor.h; sourceTree = "<group>"; };
+		A81285AF2102D1F5004D891C /* WHDebugCPUMemoryMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHDebugCPUMemoryMonitor.m; sourceTree = "<group>"; };
+		A81285B02102D1F5004D891C /* WHDebugToolManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHDebugToolManager.h; sourceTree = "<group>"; };
+		A81285B12102D1F5004D891C /* WHDebugFPSMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHDebugFPSMonitor.m; sourceTree = "<group>"; };
+		A81285B22102D1F5004D891C /* WHDebugConsoleLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHDebugConsoleLabel.m; sourceTree = "<group>"; };
 		A827FB322090275E0007B4EC /* UIButton+countDown.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+countDown.h"; sourceTree = "<group>"; };
 		A827FB332090275F0007B4EC /* UIButton+countDown.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+countDown.m"; sourceTree = "<group>"; };
 		A827FB35209027B40007B4EC /* UITextView+YLTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+YLTextView.h"; sourceTree = "<group>"; };
 		A827FB36209027B50007B4EC /* UITextView+YLTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+YLTextView.m"; sourceTree = "<group>"; };
+		A8537563210893C200B08137 /* GuideView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GuideView.h; sourceTree = "<group>"; };
+		A8537564210893C200B08137 /* GuideView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GuideView.m; sourceTree = "<group>"; };
+		A8537566210893D500B08137 /* GuideView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GuideView.xib; sourceTree = "<group>"; };
 		A88C244A1FF494F6008D5C62 /* CoustromViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoustromViewController.h; sourceTree = "<group>"; };
 		A88C244B1FF494F6008D5C62 /* CoustromViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoustromViewController.m; sourceTree = "<group>"; };
 		A88C244D1FF49505008D5C62 /* ToolHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToolHeader.h; sourceTree = "<group>"; };
@@ -499,6 +516,21 @@
 			path = ToolUITests;
 			sourceTree = "<group>";
 		};
+		A81285AA2102D1F5004D891C /* WHDebugTool */ = {
+			isa = PBXGroup;
+			children = (
+				A81285AB2102D1F5004D891C /* WHDebugCPUMemoryMonitor.h */,
+				A81285AC2102D1F5004D891C /* WHDebugToolManager.m */,
+				A81285AD2102D1F5004D891C /* WHDebugConsoleLabel.h */,
+				A81285AE2102D1F5004D891C /* WHDebugFPSMonitor.h */,
+				A81285AF2102D1F5004D891C /* WHDebugCPUMemoryMonitor.m */,
+				A81285B02102D1F5004D891C /* WHDebugToolManager.h */,
+				A81285B12102D1F5004D891C /* WHDebugFPSMonitor.m */,
+				A81285B22102D1F5004D891C /* WHDebugConsoleLabel.m */,
+			);
+			path = WHDebugTool;
+			sourceTree = "<group>";
+		};
 		A827FB31209026830007B4EC /* Category */ = {
 			isa = PBXGroup;
 			children = (
@@ -568,6 +600,7 @@
 		A897953820904B6800CEEE58 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				A81285AA2102D1F5004D891C /* WHDebugTool */,
 				A8F82E5620F4B6D80077FC1E /* OtherHeader.h */,
 				A8ABFD6720930ACF00107B69 /* ZZPhotoKit */,
 				A8ABFD55209306DF00107B69 /* Source */,
@@ -616,6 +649,9 @@
 				A8F0393920ECA21C00A0541C /* JSHHorseRaceLampView.h */,
 				A8F0393A20ECA21C00A0541C /* JSHHorseRaceLampView.m */,
 				A8F0393C20ECA22500A0541C /* JSHHorseRaceLampView.xib */,
+				A8537563210893C200B08137 /* GuideView.h */,
+				A8537564210893C200B08137 /* GuideView.m */,
+				A8537566210893D500B08137 /* GuideView.xib */,
 			);
 			path = "测试";
 			sourceTree = "<group>";
@@ -701,8 +737,8 @@
 		A8ABFD55209306DF00107B69 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				A8ABFD56209306DF00107B69 /* KxMenu.m */,
 				A8ABFD57209306DF00107B69 /* KxMenu.h */,
+				A8ABFD56209306DF00107B69 /* KxMenu.m */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -1317,6 +1353,7 @@
 				0FC8A4051E84EE0A008D53BB /* Main.storyboard in Resources */,
 				A8ABFDC920930ACF00107B69 /* flash_open_pic.png in Resources */,
 				A8ABFDD320930ACF00107B69 /* change_camera_pic.png in Resources */,
+				A8537567210893D500B08137 /* GuideView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1365,6 +1402,7 @@
 				"${BUILT_PRODUCTS_DIR}/AXPracticalHUD/AXPracticalHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/AXWebViewController/AXWebViewController.framework",
 				"${BUILT_PRODUCTS_DIR}/Aspects/Aspects.framework",
+				"${BUILT_PRODUCTS_DIR}/HHRefreshManager/HHRefreshManager.framework",
 				"${BUILT_PRODUCTS_DIR}/HMQRCodeScanner/HMQRCodeScanner.framework",
 				"${BUILT_PRODUCTS_DIR}/HMSegmentedControl/HMSegmentedControl.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
@@ -1391,6 +1429,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AXPracticalHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AXWebViewController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Aspects.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HHRefreshManager.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HMQRCodeScanner.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HMSegmentedControl.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
@@ -1452,10 +1491,13 @@
 				A8ABFDBB20930ACF00107B69 /* ZZPhotoDatas.m in Sources */,
 				A8F82E1620F4A8BD0077FC1E /* NSString+Category.m in Sources */,
 				A8ABFDD720930ACF00107B69 /* ZZCameraController.m in Sources */,
+				A81285B42102D1F5004D891C /* WHDebugCPUMemoryMonitor.m in Sources */,
 				A8ABFDC020930ACF00107B69 /* ZZPhotoListCell.m in Sources */,
 				A8ABFD3C2092FA6000107B69 /* StartVC.m in Sources */,
 				A8ABFDBF20930ACF00107B69 /* ZZPhotoAlert.m in Sources */,
 				A896560D20B6AA1D00969862 /* LTSimpleManagerDemo.m in Sources */,
+				A81285B62102D1F5004D891C /* WHDebugConsoleLabel.m in Sources */,
+				A8537565210893C200B08137 /* GuideView.m in Sources */,
 				A8979556209059E700CEEE58 /* UserSignData.m in Sources */,
 				A8F82E1420F4A8BD0077FC1E /* NSMutableString+Safe.m in Sources */,
 				A8F82E2C20F4AC090077FC1E /* NSDictionary+Category.m in Sources */,
@@ -1517,6 +1559,7 @@
 				A8A486DB1FB2CFD500304451 /* UIScrollView+EmptyDataSet.m in Sources */,
 				A8F82E1C20F4AAAB0077FC1E /* NSAttributedString+Category.m in Sources */,
 				A8F82E3720F4AC9E0077FC1E /* NSArray+Safe.m in Sources */,
+				A81285B32102D1F5004D891C /* WHDebugToolManager.m in Sources */,
 				A8A5AD4920DBAD4F00F45970 /* TestViewController.m in Sources */,
 				A8F82DBB20F4A3160077FC1E /* NSObject+Runtime.m in Sources */,
 				A8ABFDD620930ACF00107B69 /* ZZCameraPickerViewController.m in Sources */,
@@ -1532,6 +1575,7 @@
 				A8F82E4220F4AE8E0077FC1E /* NSObject+PerformBlock.m in Sources */,
 				0FDCAC981F20CF8B0090D12A /* UIViewController+Tool.m in Sources */,
 				A896560E20B6AA1D00969862 /* LTSimpleTestOneVC.m in Sources */,
+				A81285B52102D1F5004D891C /* WHDebugFPSMonitor.m in Sources */,
 				0FC8A4361E84EEBF008D53BB /* UIColor+Tool.m in Sources */,
 				A8ABFDB820930ACF00107B69 /* ZZPhotoListViewController.m in Sources */,
 			);

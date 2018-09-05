@@ -11,5 +11,7 @@
 
 /** 菊花视图 **/
 #import "MBProgressHUD+JDragon.h"
+/** 性能检测 **/
+#import "WHDebugToolManager.h"
 
 #endif /* OtherHeader_h */

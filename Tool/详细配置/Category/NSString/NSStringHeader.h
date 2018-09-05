@@ -9,12 +9,16 @@
 #ifndef NSStringHeader_h
 #define NSStringHeader_h
 
-#import "NSMutableString+Safe.h"
+
 #import "NSString+Category.h"
 #import "NSString+DisplayTime.h"
 #import "NSString+MD5.h"
 #import "NSString+Predicate.h"
-//#import "NSString+Safe.h"  //暂时不用
 #import "NSString+Tool.h"
+
+/** 防止崩溃注入方法 **/
+//#import "NSMutableString+Safe.h"
+//#import "NSString+Safe.h"
+
 
 #endif /* NSStringHeader_h */

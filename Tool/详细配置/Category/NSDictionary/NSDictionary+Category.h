@@ -16,6 +16,13 @@
  */
 - (NSString *)TransToJSONString;
 
+/**
+ *  json的字符串转成字典
+ *
+ *  @return dic 字典
+ **/
++ (NSDictionary *)dictionaryWithJsonString:(NSString *)jsonString;
+
 //url 参数转换字典
 + (NSMutableDictionary *)getURLParameters:(NSString *)urlStr;
 @end

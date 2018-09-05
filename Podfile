@@ -11,6 +11,7 @@ pod 'SDWebImage', '~> 4.2.2'
 pod 'YYCache', '~> 1.0.4'
 pod 'IQKeyboardManager', '~> 4.0.8'
 pod 'PPNetworkHelper'
+pod 'LDImagePicker'
 
 #自适应适配
 pod 'SDAutoLayout', '~> 2.1.3'
@@ -42,5 +43,9 @@ pod 'LTScrollView', '~> 0.1.5'
 
 #提示红点
 pod 'WZLBadge', '~> 1.2.6'
+
+#上下拉刷新
+pod 'HHRefreshManager', '~> 1.0.1'
+
 
 end

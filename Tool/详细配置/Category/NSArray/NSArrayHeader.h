@@ -10,7 +10,8 @@
 #define NSArrayHeader_h
 
 #import "NSArray+Category.h"
-//#import "NSArray+Safe.h"  //暂时不用
-//#import "NSMutableArray+Safe.h"   //暂时不用
+/** 防止崩溃注入方法 **/
+//#import "NSArray+Safe.h" 
+//#import "NSMutableArray+Safe.h"
 
 #endif /* NSArrayHeader_h */

@@ -24,6 +24,7 @@ PODS:
     - AXNavigationBackItemInjection
     - AXPracticalHUD
     - NJKWebViewProgress
+  - HHRefreshManager (1.0.1)
   - HMQRCodeScanner (1.0.6)
   - HMSegmentedControl (1.5.5)
   - IQKeyboardManager (4.0.13)
@@ -54,6 +55,7 @@ PODS:
 DEPENDENCIES:
   - AFNetworking (~> 3.1.0)
   - AXWebViewController (~> 0.7.2)
+  - HHRefreshManager (~> 1.0.1)
   - HMQRCodeScanner (~> 1.0.6)
   - HMSegmentedControl (~> 1.5.4)
   - IQKeyboardManager (~> 4.0.8)
@@ -78,6 +80,7 @@ SPEC CHECKSUMS:
   AXNavigationBackItemInjection: efe0446967f3cbcc85a9118decd1e145138912dd
   AXPracticalHUD: 16c3ff6d97c061e80e80897b2e6ac8e330079472
   AXWebViewController: 96566c473fce2806f4da696132b31777f5404c9f
+  HHRefreshManager: 2221ebfc0e2a440be4a6bf1aa26254afdb964e63
   HMQRCodeScanner: 8db2d317c0e5cbe3b4709fe2b9f26c107d66554e
   HMSegmentedControl: f514c6dad47aa3065e0ed2e8046b73efc71221b9
   IQKeyboardManager: 8eab4d8111418414619d1df8e4779ce5d0f8d7e2
@@ -96,6 +99,6 @@ SPEC CHECKSUMS:
   WZLBadge: 9ec779dcfd94c825518b395e8315fccaabff1bfa
   YYCache: 8105b6638f5e849296c71f331ff83891a4942952
 
-PODFILE CHECKSUM: bfc0dfc972a3a98ed21c5d4746c5bfb263aaa493
+PODFILE CHECKSUM: f04f19cf01a94f90ed7ec3b4f178139e828af28d
 
 COCOAPODS: 1.4.0

@@ -42,19 +42,19 @@ UIColor *rgbA(CGFloat red, CGFloat green, CGFloat blue, CGFloat alpha);
  */
 + (instancetype)mainColor;
 /**
- *  背景色
+ *  背景色 (灰色)
  */
 + (instancetype)backgroudColor;
 /**
- *  线条颜色
+ *  线条颜色 (列表间隔)
  */
 + (instancetype)lineColor;
 /**
- *  字体主颜色
+ *  字体主颜色 (深色)
  */
 + (instancetype)mainTextColor;
 /**
- *  副字体颜色
+ *  副字体颜色 (相对字体主颜色浅色)
  */
 + (instancetype)otherTextColor;
 

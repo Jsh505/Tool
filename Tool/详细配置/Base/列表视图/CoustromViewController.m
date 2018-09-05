@@ -25,17 +25,21 @@
     self.coustromTableView.emptyDataSetDelegate = self;
 }
 
-#pragma mark -- UITableView
+#pragma mark UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    //cell个数
     return 0;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 100;
+}
+
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    //cell样式
     static NSString * CellIdentifier = @"CellIdentifier";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil)
@@ -46,9 +50,11 @@
     return cell;
 }
 
+#pragma mark UITableViewDelegate
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    //cell点击
+    
 }
 
 #pragma mark - DZNEmptyDataSetSource Methods
@@ -82,25 +88,6 @@
 - (CGFloat)spaceHeightForEmptyDataSet:(UIScrollView *)scrollView
 {
     return 20.0f;
-}
-
-#pragma mark 刷新
-
-- (void)CreatRefreshWithHeaderRefreshBlock:(MJRefreshBlock)headerBlock footerRefreshBlock:(MJRefreshBlock)footerBlock
-{
-    self.coustromTableView.mj_header= [MJRefreshNormalHeader headerWithRefreshingBlock:^ {
-        headerBlock();
-    }];
-    
-    // 上拉刷新
-    self.coustromTableView.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
-        footerBlock();
-    }];
-}
-
-- (void)endRefreshing {
-    [self.coustromTableView.mj_header endRefreshing];
-    [self.coustromTableView.mj_footer endRefreshing];
 }
 
 #pragma mark -- getter

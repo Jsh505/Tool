@@ -26,7 +26,6 @@ typedef void (^PPHttpProgress)(NSProgress *progress);
 typedef void(^PPNetworkStatus)(PPNetworkStatusType status);
 
 
-
 @interface NetManeger : NSObject
 
 
@@ -36,6 +35,8 @@ typedef void(^PPNetworkStatus)(PPNetworkStatusType status);
 /// 取消指定URL的HTTP请求
 + (void)cancelRequestWithURL:(NSString *)URL;
 
+/** 检测当前网络是否通畅 **/
++ (BOOL)checkNetworkConnection;
 
 /**
  *  GET请求,无缓存

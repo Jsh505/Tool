@@ -58,10 +58,19 @@ static const char *UIControl_enventIsIgnoreEvent = "UIControl_enventIsIgnoreEven
 
 - (void)_wxd_sendAction:(SEL)action to:(id)target forEvent:(UIEvent *)event
 {
-    self.eventTimeInterval = self.eventTimeInterval == 0 ? defaultInterval : self.eventTimeInterval;
-    if (self.isIgnoreEvent){
+
+    if ([NSStringFromClass([self class]) isEqualToString:@"CUShutterButton"] || [NSStringFromClass([self class]) isEqualToString:@"CAMShutterButton"])
+    {
+        [self _wxd_sendAction:action to:target forEvent:event];
         return;
-    }else if (self.eventTimeInterval > 0){
+    }
+    self.eventTimeInterval = self.eventTimeInterval == 0 ? defaultInterval : self.eventTimeInterval;
+    if (self.isIgnoreEvent)
+    {
+        return;
+    }
+    else if (self.eventTimeInterval > 0)
+    {
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(self.eventTimeInterval * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             [self setIsIgnoreEvent:NO];
         });

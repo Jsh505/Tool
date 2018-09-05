@@ -10,7 +10,8 @@
 #define NSDictionaryHeader_h
 
 #import "NSDictionary+Category.h"
-//#import "NSDictionary+Safe.h" //暂时不用
-//#import "NSMutableDictionary+Safe.h"  //暂时不用
+/** 防止崩溃注入方法 **/
+//#import "NSDictionary+Safe.h" 
+//#import "NSMutableDictionary+Safe.h"
 
 #endif /* NSDictionaryHeader_h */

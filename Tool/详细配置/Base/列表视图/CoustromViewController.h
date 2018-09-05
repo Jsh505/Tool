@@ -8,22 +8,18 @@
 
 #import <UIKit/UIKit.h>
 #import "UIScrollView+EmptyDataSet.h"
-
-/** 进入刷新状态的回调 */
-typedef void (^MJRefreshBlock)(void);
+#import "HHRefreshManager.h"
 
 @class MJRefreshHeader, MJRefreshFooter;
 
 @interface CoustromViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, DZNEmptyDataSetSource, DZNEmptyDataSetDelegate>
 
 @property (nonatomic, strong) UITableView * coustromTableView;
+@property (nonatomic, strong) HHRefreshManager * refreshManager;
 
-//结束刷新
-- (void)endRefreshing;
-
+/** 没有数据展示字段 **/
 - (NSAttributedString *)titleForEmptyDataSet:(UIScrollView *)scrollView;
 
-- (void)CreatRefreshWithHeaderRefreshBlock:(MJRefreshBlock)headerBlock footerRefreshBlock:(MJRefreshBlock)footerBlock;
 
 
 @end

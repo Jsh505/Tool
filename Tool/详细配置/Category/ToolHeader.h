@@ -17,11 +17,12 @@
 #import "NSDictionaryHeader.h"
 #import "NSArrayHeader.h"
 #import "NSObjectHeader.h"
-//#import "NSData+CommonCryptor.h" //暂时不用
 #import "UIColorHeader.h"
 #import "UIImageHeader.h"
 #import "UIButtonHeader.h"
 
+/** 数据加密解密 **/
+//#import "NSData+CommonCryptor.h"
 /** 打印当前视图名字 **/
 #import "UIViewController+Tool.h"
 /** 加载图片设置默认图片 **/

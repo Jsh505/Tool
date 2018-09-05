@@ -10,11 +10,13 @@
 #import "TestCollectionViewCell.h"
 #import <MJRefresh/MJRefresh.h>
 #import "JSHHorseRaceLampView.h"
+#import "GuideView.h"
 
-@interface TestViewController () <UICollectionViewDelegate,UICollectionViewDataSource, UITableViewDelegate, UITableViewDataSource>
+@interface TestViewController () <UICollectionViewDelegate,UICollectionViewDataSource, UITableViewDelegate, UITableViewDataSource, GuideViewDelegate>
 {
     int _count;
     int _index;
+    CGFloat beginContentY;          //开始滑动的位置
 }
 
 @property (nonatomic, strong) UITableView * coustromTableView;
@@ -22,6 +24,8 @@
 @property (nonatomic, strong) JSHHorseRaceLampView * labelView;
 @property (nonatomic, strong) NSArray * arr;
 @property (nonatomic, strong) NSTimer* timer;
+
+@property (nonatomic, strong) UIView * headerView;
 
 
 @end
@@ -38,10 +42,16 @@
     _count = 20;
     
 //    [self.view addSubview:self.mainScrollView];
-//    [self.view addSubview:self.collectionView];
+    [self.view addSubview:self.collectionView];
+    [self.view addSubview:self.headerView];
     
-    self.arr = @[@[@"说的阿萨德",@"3"],@[@"说德11111111231111",@"4"],@[@"说的123阿萨说的123阿萨说的123阿萨",@"3"],@[@"说3的德",@"4"]];
-    [self.view addSubview:self.coustromTableView];
+    GuideView * guideView = [[GuideView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
+    guideView.delegate = self;
+    guideView.imageArr = @[@"01找工作",@"02爱学习",@"03交朋友"];
+    [guideView addToWindow];
+    
+//    self.arr = @[@[@"说的阿萨德",@"3"],@[@"说德11111111231111",@"4"],@[@"说的123阿萨说的123阿萨说的123阿萨",@"3"],@[@"说3的德",@"4"]];
+//    [self.view addSubview:self.coustromTableView];
     
     
 //    self.timer = [NSTimer scheduledTimerWithTimeInterval:[self.arr[_index][1] intValue] target:self selector:@selector(showLabel) userInfo:nil repeats:NO];
@@ -58,6 +68,111 @@
 //        [weakself.collectionView.mj_footer endRefreshing];
 //    }];
 }
+
+- (void)endShowGuideView
+{
+    NSLog(@"结束了");
+}
+
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
+
+{
+    beginContentY = scrollView.contentOffset.y;          //开始滑动的位置
+}
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    CGFloat endContentY = scrollView.contentOffset.y;
+    
+    if (endContentY-beginContentY >= 0)
+        
+    {
+        
+        [UIView animateWithDuration:0.25 animations:^{
+            
+            self.headerView.frame = CGRectMake(0, -50, SCREEN_WIDTH, 50);
+            
+            self.collectionView.contentInset = UIEdgeInsetsMake(0, 0, 0, 0);
+            
+            
+            
+        } completion:^(BOOL finished) {
+            
+            
+            
+        }];
+        
+    }
+    
+    else
+        
+    {
+        
+        [UIView animateWithDuration:0.25 animations:^{
+            
+            self.headerView.frame = CGRectMake(0, 0, SCREEN_WIDTH, 50);
+            
+            self.collectionView.contentInset = UIEdgeInsetsMake(50, 0, 0, 0);
+            
+            
+        } completion:^(BOOL finished) {
+            
+            
+            
+        }];
+        
+    }
+}
+
+
+//- (void)scrollViewWillEndDragging:(UIScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset
+//
+//{
+//
+//    CGFloat endContentY = scrollView.contentOffset.y;
+//
+//    if (endContentY-beginContentY >= 0)
+//
+//    {
+//
+//        [UIView animateWithDuration:0.25 animations:^{
+//
+//            self.headerView.frame = CGRectMake(0, -50, SCREEN_WIDTH, 50);
+//
+//            self.collectionView.contentInset = UIEdgeInsetsMake(0, 0, 0, 0);
+//
+//
+//
+//        } completion:^(BOOL finished) {
+//
+//
+//
+//        }];
+//
+//    }
+//
+//    else
+//
+//    {
+//
+//        [UIView animateWithDuration:0.25 animations:^{
+//
+//            self.headerView.frame = CGRectMake(0, 0, SCREEN_WIDTH, 50);
+//
+//            self.collectionView.contentInset = UIEdgeInsetsMake(50, 0, 0, 0);
+//
+//
+//        } completion:^(BOOL finished) {
+//
+//
+//
+//        }];
+//
+//    }
+//
+//
+//
+//}
 
 - (void)showLabel
 {
@@ -270,6 +385,8 @@
         _collectionView.backgroundColor = [UIColor whiteColor];
         _collectionView.delegate = self ;
         _collectionView.dataSource = self ;
+        _collectionView.contentInset = UIEdgeInsetsMake(50, 0, 0, 0);
+        
     }
     return _collectionView;
 }
@@ -294,6 +411,16 @@
         _labelView = [[JSHHorseRaceLampView alloc] initWithFrame:CGRectMake(15, 25, SCREEN_WIDTH - 30, 30)];
     }
     return _labelView;
+}
+
+- (UIView *)headerView
+{
+    if (!_headerView)
+    {
+        _headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 50)];
+        _headerView.backgroundColor = [UIColor grayColor];
+    }
+    return _headerView;
 }
 
 @end

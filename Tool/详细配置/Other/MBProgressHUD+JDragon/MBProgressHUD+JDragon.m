@@ -16,7 +16,14 @@
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
     hud.label.text = message?message:@"加载中.....";
     hud.label.font = [UIFont systemFontOfSize:15];
+    hud.label.textColor = [UIColor whiteColor];
     hud.removeFromSuperViewOnHide = YES;
+    //修改样式，否则等待框背景色将为半透明
+    hud.bezelView.style = MBProgressHUDBackgroundStyleSolidColor;
+    //设置等待框背景色为黑色
+    hud.bezelView.backgroundColor = [UIColor blackColor];
+    //设置菊花框为白色
+    [hud setActivityIndicatorColor:[UIColor whiteColor]];
     return hud;
 }
 #pragma mark-------------------- show Tip----------------------------
@@ -41,6 +48,7 @@
 {
     MBProgressHUD *hud = [self createMBProgressHUDviewWithMessage:message isWindiw:isWindow];
     hud.mode = MBProgressHUDModeText;
+    hud.label.textColor = [UIColor whiteColor];
     [hud hideAnimated:YES afterDelay:1];
 }
 #pragma mark-------------------- show Activity----------------------------
@@ -65,6 +73,7 @@
 {
     MBProgressHUD *hud  =  [self createMBProgressHUDviewWithMessage:message isWindiw:isWindow];
     hud.mode = MBProgressHUDModeIndeterminate;
+    hud.label.textColor = [UIColor whiteColor];
     if (aTimer>0) {
         [hud hideAnimated:YES afterDelay:aTimer];
     }
@@ -105,6 +114,7 @@
     MBProgressHUD *hud  =  [self createMBProgressHUDviewWithMessage:message isWindiw:isWindow];
     hud.customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:iconName]];
     hud.mode = MBProgressHUDModeCustomView;
+    hud.label.textColor = [UIColor whiteColor];
     [hud hideAnimated:YES afterDelay:1];
     
 }

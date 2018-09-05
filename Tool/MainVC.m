@@ -18,7 +18,7 @@
 #import <AXWebViewController/AXWebViewController.h>
 #import "LTSimpleManagerDemo.h"
 
-@interface MainVC () <PYSearchViewControllerDelegate>
+@interface MainVC () <PYSearchViewControllerDelegate, HHRefreshManagerDelegate>
 
 @end
 
@@ -31,9 +31,35 @@
     
     self.coustromTableView.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT - JSH_NavbarAndStatusBarHeight - JSH_TabBarHeight);
     [self.view addSubview:self.coustromTableView];
+    
+    self.refreshManager = [HHRefreshManager refreshWithDelegate:self scrollView:self.coustromTableView type:AnimationTypeCircle];
+    
+    
+    
 }
 
 #pragma mark UITableViewDataSource
+
+- (void)beginRefreshWithType:(HHRefreshType)type
+{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        
+        
+        
+        
+    });
+    [NetManeger GET:@"12312" parameters:nil hudString:@"123123" success:^(id responseObject)
+     {
+         
+         [self.refreshManager endRefreshWithType:HHRefreshTypeHeader];
+         [self.refreshManager endRefreshWithType:HHRefreshTypeFooter];
+     } failure:^(NSString *error)
+     {
+         [MBProgressHUD showErrorMessage:error];
+         [self.refreshManager endRefreshWithType:HHRefreshTypeHeader];
+         [self.refreshManager endRefreshWithType:HHRefreshTypeFooter];
+     }];
+}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
