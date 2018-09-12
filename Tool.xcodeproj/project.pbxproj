@@ -118,6 +118,26 @@
 		A8EBF1C220E24BE000822A5D /* TestCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A8EBF1BF20E24BE000822A5D /* TestCollectionViewCell.m */; };
 		A8F0393B20ECA21C00A0541C /* JSHHorseRaceLampView.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F0393A20ECA21C00A0541C /* JSHHorseRaceLampView.m */; };
 		A8F0393D20ECA22500A0541C /* JSHHorseRaceLampView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8F0393C20ECA22500A0541C /* JSHHorseRaceLampView.xib */; };
+		A8F38E0F2148FFBC006B71D9 /* NSLayoutConstraint+IBDesignable.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F38E0E2148FFBC006B71D9 /* NSLayoutConstraint+IBDesignable.m */; };
+		A8F38E2021490445006B71D9 /* UITextView+FontFit.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F38E1421490444006B71D9 /* UITextView+FontFit.m */; };
+		A8F38E2121490445006B71D9 /* UILabel+FontFit.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F38E1521490444006B71D9 /* UILabel+FontFit.m */; };
+		A8F38E2221490445006B71D9 /* UIButton+FontFit.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F38E1821490444006B71D9 /* UIButton+FontFit.m */; };
+		A8F38E2321490445006B71D9 /* NSObject+TBAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F38E1921490444006B71D9 /* NSObject+TBAdd.m */; };
+		A8F38E2421490445006B71D9 /* UIFont+Font.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F38E1B21490444006B71D9 /* UIFont+Font.m */; };
+		A8F38E2521490445006B71D9 /* UITextField+FontFit.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F38E1E21490445006B71D9 /* UITextField+FontFit.m */; };
+		A8F38E902149254B006B71D9 /* LBXPermissionCalendar.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F38E7721492544006B71D9 /* LBXPermissionCalendar.m */; };
+		A8F38E912149254B006B71D9 /* NetReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F38E7A21492545006B71D9 /* NetReachability.m */; };
+		A8F38E922149254B006B71D9 /* LBXPermissionContacts.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F38E7B21492545006B71D9 /* LBXPermissionContacts.m */; };
+		A8F38E932149254B006B71D9 /* LBXPermissionMicrophone.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F38E7D21492546006B71D9 /* LBXPermissionMicrophone.m */; };
+		A8F38E942149254B006B71D9 /* LBXPermissionSetting.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F38E7E21492546006B71D9 /* LBXPermissionSetting.m */; };
+		A8F38E952149254B006B71D9 /* LBXPermissionData.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F38E8021492546006B71D9 /* LBXPermissionData.m */; };
+		A8F38E962149254B006B71D9 /* LBXPermissionLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F38E8121492547006B71D9 /* LBXPermissionLocation.m */; };
+		A8F38E972149254B006B71D9 /* LBXPermissionNet.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F38E8321492547006B71D9 /* LBXPermissionNet.m */; };
+		A8F38E982149254B006B71D9 /* LBXPermissionReminders.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F38E8521492548006B71D9 /* LBXPermissionReminders.m */; };
+		A8F38E992149254B006B71D9 /* LBXPermission.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F38E8721492548006B71D9 /* LBXPermission.m */; };
+		A8F38E9A2149254B006B71D9 /* LBXPermissionPhotos.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F38E8921492549006B71D9 /* LBXPermissionPhotos.m */; };
+		A8F38E9B2149254B006B71D9 /* LBXPermissionHealth.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F38E8B2149254A006B71D9 /* LBXPermissionHealth.m */; };
+		A8F38E9C2149254B006B71D9 /* LBXPermissionCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F38E8D2149254A006B71D9 /* LBXPermissionCamera.m */; };
 		A8F6F649209B1A6A00BD422D /* NetManeger.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F6F648209B1A6A00BD422D /* NetManeger.m */; };
 		A8F82DBB20F4A3160077FC1E /* NSObject+Runtime.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F82DBA20F4A3160077FC1E /* NSObject+Runtime.m */; };
 		A8F82E1220F4A8BD0077FC1E /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F82E0720F4A8BC0077FC1E /* NSString+MD5.m */; };
@@ -361,6 +381,46 @@
 		A8F0393920ECA21C00A0541C /* JSHHorseRaceLampView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSHHorseRaceLampView.h; sourceTree = "<group>"; };
 		A8F0393A20ECA21C00A0541C /* JSHHorseRaceLampView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSHHorseRaceLampView.m; sourceTree = "<group>"; };
 		A8F0393C20ECA22500A0541C /* JSHHorseRaceLampView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JSHHorseRaceLampView.xib; sourceTree = "<group>"; };
+		A8F38E0D2148FFBC006B71D9 /* NSLayoutConstraint+IBDesignable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSLayoutConstraint+IBDesignable.h"; sourceTree = "<group>"; };
+		A8F38E0E2148FFBC006B71D9 /* NSLayoutConstraint+IBDesignable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+IBDesignable.m"; sourceTree = "<group>"; };
+		A8F38E1421490444006B71D9 /* UITextView+FontFit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+FontFit.m"; sourceTree = "<group>"; };
+		A8F38E1521490444006B71D9 /* UILabel+FontFit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+FontFit.m"; sourceTree = "<group>"; };
+		A8F38E1621490444006B71D9 /* UIButton+FontFit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+FontFit.h"; sourceTree = "<group>"; };
+		A8F38E1721490444006B71D9 /* UILabel+FontFit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+FontFit.h"; sourceTree = "<group>"; };
+		A8F38E1821490444006B71D9 /* UIButton+FontFit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+FontFit.m"; sourceTree = "<group>"; };
+		A8F38E1921490444006B71D9 /* NSObject+TBAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+TBAdd.m"; sourceTree = "<group>"; };
+		A8F38E1A21490444006B71D9 /* UIFont+Font.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+Font.h"; sourceTree = "<group>"; };
+		A8F38E1B21490444006B71D9 /* UIFont+Font.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+Font.m"; sourceTree = "<group>"; };
+		A8F38E1C21490445006B71D9 /* NSObject+TBAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+TBAdd.h"; sourceTree = "<group>"; };
+		A8F38E1D21490445006B71D9 /* UITextField+FontFit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+FontFit.h"; sourceTree = "<group>"; };
+		A8F38E1E21490445006B71D9 /* UITextField+FontFit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+FontFit.m"; sourceTree = "<group>"; };
+		A8F38E1F21490445006B71D9 /* UITextView+FontFit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+FontFit.h"; sourceTree = "<group>"; };
+		A8F38E7621492544006B71D9 /* LBXPermissionSetting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBXPermissionSetting.h; sourceTree = "<group>"; };
+		A8F38E7721492544006B71D9 /* LBXPermissionCalendar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBXPermissionCalendar.m; sourceTree = "<group>"; };
+		A8F38E7821492544006B71D9 /* LBXPermissionHealth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBXPermissionHealth.h; sourceTree = "<group>"; };
+		A8F38E7921492545006B71D9 /* LBXPermissionCamera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBXPermissionCamera.h; sourceTree = "<group>"; };
+		A8F38E7A21492545006B71D9 /* NetReachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetReachability.m; sourceTree = "<group>"; };
+		A8F38E7B21492545006B71D9 /* LBXPermissionContacts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBXPermissionContacts.m; sourceTree = "<group>"; };
+		A8F38E7C21492546006B71D9 /* LBXPermission.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBXPermission.h; sourceTree = "<group>"; };
+		A8F38E7D21492546006B71D9 /* LBXPermissionMicrophone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBXPermissionMicrophone.m; sourceTree = "<group>"; };
+		A8F38E7E21492546006B71D9 /* LBXPermissionSetting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBXPermissionSetting.m; sourceTree = "<group>"; };
+		A8F38E7F21492546006B71D9 /* LBXPermissionData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBXPermissionData.h; sourceTree = "<group>"; };
+		A8F38E8021492546006B71D9 /* LBXPermissionData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBXPermissionData.m; sourceTree = "<group>"; };
+		A8F38E8121492547006B71D9 /* LBXPermissionLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBXPermissionLocation.m; sourceTree = "<group>"; };
+		A8F38E8221492547006B71D9 /* LBXPermissionMicrophone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBXPermissionMicrophone.h; sourceTree = "<group>"; };
+		A8F38E8321492547006B71D9 /* LBXPermissionNet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBXPermissionNet.m; sourceTree = "<group>"; };
+		A8F38E8421492547006B71D9 /* LBXPermissionPhotos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBXPermissionPhotos.h; sourceTree = "<group>"; };
+		A8F38E8521492548006B71D9 /* LBXPermissionReminders.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBXPermissionReminders.m; sourceTree = "<group>"; };
+		A8F38E8621492548006B71D9 /* LBXPermissionContacts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBXPermissionContacts.h; sourceTree = "<group>"; };
+		A8F38E8721492548006B71D9 /* LBXPermission.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBXPermission.m; sourceTree = "<group>"; };
+		A8F38E8821492549006B71D9 /* LBXPermissionCalendar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBXPermissionCalendar.h; sourceTree = "<group>"; };
+		A8F38E8921492549006B71D9 /* LBXPermissionPhotos.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBXPermissionPhotos.m; sourceTree = "<group>"; };
+		A8F38E8A21492549006B71D9 /* LBXPermissionReminders.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBXPermissionReminders.h; sourceTree = "<group>"; };
+		A8F38E8B2149254A006B71D9 /* LBXPermissionHealth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBXPermissionHealth.m; sourceTree = "<group>"; };
+		A8F38E8C2149254A006B71D9 /* NetReachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetReachability.h; sourceTree = "<group>"; };
+		A8F38E8D2149254A006B71D9 /* LBXPermissionCamera.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBXPermissionCamera.m; sourceTree = "<group>"; };
+		A8F38E8E2149254B006B71D9 /* LBXPermissionLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBXPermissionLocation.h; sourceTree = "<group>"; };
+		A8F38E8F2149254B006B71D9 /* LBXPermissionNet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBXPermissionNet.h; sourceTree = "<group>"; };
 		A8F6F647209B1A6A00BD422D /* NetManeger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetManeger.h; sourceTree = "<group>"; };
 		A8F6F648209B1A6A00BD422D /* NetManeger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetManeger.m; sourceTree = "<group>"; };
 		A8F82DB920F4A3160077FC1E /* NSObject+Runtime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Runtime.h"; sourceTree = "<group>"; };
@@ -534,6 +594,8 @@
 		A827FB31209026830007B4EC /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				A8F38E1021490283006B71D9 /* 字体适配 */,
+				A8F38E0C2148FFA5006B71D9 /* xib约束适配 */,
 				A896BFF92021874000EFA5D4 /* NullSafe.m */,
 				A88C244D1FF49505008D5C62 /* ToolHeader.h */,
 				A8F82E5420F4B4690077FC1E /* UITextView(占位符) */,
@@ -600,6 +662,7 @@
 		A897953820904B6800CEEE58 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				A8F38E4E2149252F006B71D9 /* LBXPermissions */,
 				A81285AA2102D1F5004D891C /* WHDebugTool */,
 				A8F82E5620F4B6D80077FC1E /* OtherHeader.h */,
 				A8ABFD6720930ACF00107B69 /* ZZPhotoKit */,
@@ -1008,6 +1071,67 @@
 				A8EB69332091AF9B0043E1FF /* ErweimaVC.xib */,
 			);
 			path = "二维码";
+			sourceTree = "<group>";
+		};
+		A8F38E0C2148FFA5006B71D9 /* xib约束适配 */ = {
+			isa = PBXGroup;
+			children = (
+				A8F38E0D2148FFBC006B71D9 /* NSLayoutConstraint+IBDesignable.h */,
+				A8F38E0E2148FFBC006B71D9 /* NSLayoutConstraint+IBDesignable.m */,
+			);
+			path = "xib约束适配";
+			sourceTree = "<group>";
+		};
+		A8F38E1021490283006B71D9 /* 字体适配 */ = {
+			isa = PBXGroup;
+			children = (
+				A8F38E1C21490445006B71D9 /* NSObject+TBAdd.h */,
+				A8F38E1921490444006B71D9 /* NSObject+TBAdd.m */,
+				A8F38E1621490444006B71D9 /* UIButton+FontFit.h */,
+				A8F38E1821490444006B71D9 /* UIButton+FontFit.m */,
+				A8F38E1A21490444006B71D9 /* UIFont+Font.h */,
+				A8F38E1B21490444006B71D9 /* UIFont+Font.m */,
+				A8F38E1721490444006B71D9 /* UILabel+FontFit.h */,
+				A8F38E1521490444006B71D9 /* UILabel+FontFit.m */,
+				A8F38E1D21490445006B71D9 /* UITextField+FontFit.h */,
+				A8F38E1E21490445006B71D9 /* UITextField+FontFit.m */,
+				A8F38E1F21490445006B71D9 /* UITextView+FontFit.h */,
+				A8F38E1421490444006B71D9 /* UITextView+FontFit.m */,
+			);
+			path = "字体适配";
+			sourceTree = "<group>";
+		};
+		A8F38E4E2149252F006B71D9 /* LBXPermissions */ = {
+			isa = PBXGroup;
+			children = (
+				A8F38E7C21492546006B71D9 /* LBXPermission.h */,
+				A8F38E8721492548006B71D9 /* LBXPermission.m */,
+				A8F38E8821492549006B71D9 /* LBXPermissionCalendar.h */,
+				A8F38E7721492544006B71D9 /* LBXPermissionCalendar.m */,
+				A8F38E7921492545006B71D9 /* LBXPermissionCamera.h */,
+				A8F38E8D2149254A006B71D9 /* LBXPermissionCamera.m */,
+				A8F38E8621492548006B71D9 /* LBXPermissionContacts.h */,
+				A8F38E7B21492545006B71D9 /* LBXPermissionContacts.m */,
+				A8F38E7F21492546006B71D9 /* LBXPermissionData.h */,
+				A8F38E8021492546006B71D9 /* LBXPermissionData.m */,
+				A8F38E7821492544006B71D9 /* LBXPermissionHealth.h */,
+				A8F38E8B2149254A006B71D9 /* LBXPermissionHealth.m */,
+				A8F38E8E2149254B006B71D9 /* LBXPermissionLocation.h */,
+				A8F38E8121492547006B71D9 /* LBXPermissionLocation.m */,
+				A8F38E8221492547006B71D9 /* LBXPermissionMicrophone.h */,
+				A8F38E7D21492546006B71D9 /* LBXPermissionMicrophone.m */,
+				A8F38E8F2149254B006B71D9 /* LBXPermissionNet.h */,
+				A8F38E8321492547006B71D9 /* LBXPermissionNet.m */,
+				A8F38E8421492547006B71D9 /* LBXPermissionPhotos.h */,
+				A8F38E8921492549006B71D9 /* LBXPermissionPhotos.m */,
+				A8F38E8A21492549006B71D9 /* LBXPermissionReminders.h */,
+				A8F38E8521492548006B71D9 /* LBXPermissionReminders.m */,
+				A8F38E7621492544006B71D9 /* LBXPermissionSetting.h */,
+				A8F38E7E21492546006B71D9 /* LBXPermissionSetting.m */,
+				A8F38E8C2149254A006B71D9 /* NetReachability.h */,
+				A8F38E7A21492545006B71D9 /* NetReachability.m */,
+			);
+			path = LBXPermissions;
 			sourceTree = "<group>";
 		};
 		A8F82E0520F4A89F0077FC1E /* NSString */ = {
@@ -1482,6 +1606,7 @@
 				A8F6F649209B1A6A00BD422D /* NetManeger.m in Sources */,
 				A8ABFDB620930ACF00107B69 /* ZZPhotoBrowerViewController.m in Sources */,
 				A89795422090549100CEEE58 /* ZLTabBarViewController.m in Sources */,
+				A8F38E2021490445006B71D9 /* UITextView+FontFit.m in Sources */,
 				A8ABFDB520930ACF00107B69 /* ZZPhotoController.m in Sources */,
 				A8A486D81FB2CF2F00304451 /* UIImageView+SDSetImage.m in Sources */,
 				A827FB342090275F0007B4EC /* UIButton+countDown.m in Sources */,
@@ -1490,6 +1615,7 @@
 				A8ABFDC120930ACF00107B69 /* ZZPhotoHud.m in Sources */,
 				A8ABFDBB20930ACF00107B69 /* ZZPhotoDatas.m in Sources */,
 				A8F82E1620F4A8BD0077FC1E /* NSString+Category.m in Sources */,
+				A8F38E932149254B006B71D9 /* LBXPermissionMicrophone.m in Sources */,
 				A8ABFDD720930ACF00107B69 /* ZZCameraController.m in Sources */,
 				A81285B42102D1F5004D891C /* WHDebugCPUMemoryMonitor.m in Sources */,
 				A8ABFDC020930ACF00107B69 /* ZZPhotoListCell.m in Sources */,
@@ -1498,24 +1624,29 @@
 				A896560D20B6AA1D00969862 /* LTSimpleManagerDemo.m in Sources */,
 				A81285B62102D1F5004D891C /* WHDebugConsoleLabel.m in Sources */,
 				A8537565210893C200B08137 /* GuideView.m in Sources */,
+				A8F38E962149254B006B71D9 /* LBXPermissionLocation.m in Sources */,
 				A8979556209059E700CEEE58 /* UserSignData.m in Sources */,
 				A8F82E1420F4A8BD0077FC1E /* NSMutableString+Safe.m in Sources */,
 				A8F82E2C20F4AC090077FC1E /* NSDictionary+Category.m in Sources */,
 				A8ABFDBE20930ACF00107B69 /* ZZPhotoPickerFooterView.m in Sources */,
+				A8F38E982149254B006B71D9 /* LBXPermissionReminders.m in Sources */,
 				A8A486D21FB2CDFD00304451 /* UIButton+TouchOne.m in Sources */,
 				A8EB69252091709D0043E1FF /* JianbianVC.m in Sources */,
 				0FC8A4021E84EE0A008D53BB /* ViewController.m in Sources */,
 				A8F82E2B20F4AC090077FC1E /* NSDictionary+Safe.m in Sources */,
 				0FC8A3FF1E84EE0A008D53BB /* AppDelegate.m in Sources */,
+				A8F38E952149254B006B71D9 /* LBXPermissionData.m in Sources */,
 				A8ABFD322092F24600107B69 /* SegmentedControlVC.m in Sources */,
 				A8ABFD4B2092FFC700107B69 /* CountDownButtonVC.m in Sources */,
 				A8A486D51FB2CEF800304451 /* UIButton+SDSetImage.m in Sources */,
 				A8ABFD6620930ABF00107B69 /* PicsCell.m in Sources */,
+				A8F38E2321490445006B71D9 /* NSObject+TBAdd.m in Sources */,
 				A897953720904B6100CEEE58 /* MBProgressHUD+JDragon.m in Sources */,
 				A8F82E4320F4AE8E0077FC1E /* NSObject+Swizzle.m in Sources */,
 				A8EBF1C220E24BE000822A5D /* TestCollectionViewCell.m in Sources */,
 				A8ABFDB720930ACF00107B69 /* ZZPhotoPickerViewController.m in Sources */,
 				A8ABFD6320930AA700107B69 /* ZZBrowserVC.m in Sources */,
+				A8F38E9B2149254B006B71D9 /* LBXPermissionHealth.m in Sources */,
 				A8ABFDD420930ACF00107B69 /* ZZAlumAnimation.m in Sources */,
 				A8ABFDC320930ACF00107B69 /* ZZBrowserPickerViewController.m in Sources */,
 				A896BFFA2021874000EFA5D4 /* NullSafe.m in Sources */,
@@ -1531,18 +1662,24 @@
 				A8F82E3620F4AC9E0077FC1E /* NSArray+Category.m in Sources */,
 				A8ABFD58209306DF00107B69 /* KxMenu.m in Sources */,
 				A8EB6921209163FE0043E1FF /* GradientTableViewController.m in Sources */,
+				A8F38E972149254B006B71D9 /* LBXPermissionNet.m in Sources */,
 				A8EB68F720907AD20043E1FF /* SDCycleScrollViewVC.m in Sources */,
 				A827FB37209027B50007B4EC /* UITextView+YLTextView.m in Sources */,
 				A8EB691E209163FE0043E1FF /* ReversalTableViewController.m in Sources */,
 				A8F82E2120F4AB640077FC1E /* UITableView+CellAnimation.m in Sources */,
 				A89795402090549100CEEE58 /* UIBarButtonItem+Extension.m in Sources */,
 				A88C244C1FF494F7008D5C62 /* CoustromViewController.m in Sources */,
+				A8F38E9A2149254B006B71D9 /* LBXPermissionPhotos.m in Sources */,
+				A8F38E942149254B006B71D9 /* LBXPermissionSetting.m in Sources */,
+				A8F38E2221490445006B71D9 /* UIButton+FontFit.m in Sources */,
 				A8ABFDBD20930ACF00107B69 /* ZZPhotoBrowerCell.m in Sources */,
 				A8ABFDBC20930ACF00107B69 /* ZZPhotoPickerCell.m in Sources */,
 				A8979557209059E700CEEE58 /* BaseModel.m in Sources */,
 				0FDCAC971F20CF8B0090D12A /* ObjcRuntime.m in Sources */,
 				A8EB68FE20907DB40043E1FF /* TTTAttributedLabelVC.m in Sources */,
+				A8F38E2421490445006B71D9 /* UIFont+Font.m in Sources */,
 				A8ABFDBA20930ACF00107B69 /* ZZPhoto.m in Sources */,
+				A8F38E2121490445006B71D9 /* UILabel+FontFit.m in Sources */,
 				A8F82E1220F4A8BD0077FC1E /* NSString+MD5.m in Sources */,
 				A89795412090549100CEEE58 /* ZLNaviContrViewController.m in Sources */,
 				A8979559209059E700CEEE58 /* UserModel.m in Sources */,
@@ -1553,18 +1690,22 @@
 				A8EB6922209163FE0043E1FF /* TranslateTableViewController.m in Sources */,
 				A8F82E1720F4A8BD0077FC1E /* NSString+DisplayTime.m in Sources */,
 				A8979546209054DA00CEEE58 /* MainVC.m in Sources */,
+				A8F38E9C2149254B006B71D9 /* LBXPermissionCamera.m in Sources */,
 				A8EB6920209163FE0043E1FF /* MenuTableViewController.m in Sources */,
 				A8EB6913209163F20043E1FF /* MXNavigationBarManager.m in Sources */,
 				A8ABFD442092FD9100107B69 /* RedBadgeVC.m in Sources */,
 				A8A486DB1FB2CFD500304451 /* UIScrollView+EmptyDataSet.m in Sources */,
 				A8F82E1C20F4AAAB0077FC1E /* NSAttributedString+Category.m in Sources */,
 				A8F82E3720F4AC9E0077FC1E /* NSArray+Safe.m in Sources */,
+				A8F38E922149254B006B71D9 /* LBXPermissionContacts.m in Sources */,
 				A81285B32102D1F5004D891C /* WHDebugToolManager.m in Sources */,
 				A8A5AD4920DBAD4F00F45970 /* TestViewController.m in Sources */,
+				A8F38E2521490445006B71D9 /* UITextField+FontFit.m in Sources */,
 				A8F82DBB20F4A3160077FC1E /* NSObject+Runtime.m in Sources */,
 				A8ABFDD620930ACF00107B69 /* ZZCameraPickerViewController.m in Sources */,
 				A8ABFD502093042200107B69 /* GBTagListView.m in Sources */,
 				A8EB691F209163FE0043E1FF /* MutationTableViewController.m in Sources */,
+				A8F38E992149254B006B71D9 /* LBXPermission.m in Sources */,
 				A8ABFDD520930ACF00107B69 /* ZZCameraBrowerViewController.m in Sources */,
 				A8ABFD5E2093071900107B69 /* KxMenuVC.m in Sources */,
 				0FC8A4301E84EE63008D53BB /* NSString+Tool.m in Sources */,
@@ -1572,12 +1713,15 @@
 				A8F82E2A20F4AC090077FC1E /* NSMutableDictionary+Safe.m in Sources */,
 				A8F82E3820F4AC9E0077FC1E /* NSMutableArray+Safe.m in Sources */,
 				A8F82E1320F4A8BD0077FC1E /* NSString+Predicate.m in Sources */,
+				A8F38E912149254B006B71D9 /* NetReachability.m in Sources */,
 				A8F82E4220F4AE8E0077FC1E /* NSObject+PerformBlock.m in Sources */,
 				0FDCAC981F20CF8B0090D12A /* UIViewController+Tool.m in Sources */,
 				A896560E20B6AA1D00969862 /* LTSimpleTestOneVC.m in Sources */,
+				A8F38E0F2148FFBC006B71D9 /* NSLayoutConstraint+IBDesignable.m in Sources */,
 				A81285B52102D1F5004D891C /* WHDebugFPSMonitor.m in Sources */,
 				0FC8A4361E84EEBF008D53BB /* UIColor+Tool.m in Sources */,
 				A8ABFDB820930ACF00107B69 /* ZZPhotoListViewController.m in Sources */,
+				A8F38E902149254B006B71D9 /* LBXPermissionCalendar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

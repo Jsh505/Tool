@@ -11,6 +11,8 @@
 #import <MJRefresh/MJRefresh.h>
 #import "JSHHorseRaceLampView.h"
 #import "GuideView.h"
+#import "LBXPermission.h"
+#import "LBXPermissionSetting.h"
 
 @interface TestViewController () <UICollectionViewDelegate,UICollectionViewDataSource, UITableViewDelegate, UITableViewDataSource, GuideViewDelegate>
 {
@@ -45,10 +47,10 @@
     [self.view addSubview:self.collectionView];
     [self.view addSubview:self.headerView];
     
-    GuideView * guideView = [[GuideView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
-    guideView.delegate = self;
-    guideView.imageArr = @[@"01找工作",@"02爱学习",@"03交朋友"];
-    [guideView addToWindow];
+//    GuideView * guideView = [[GuideView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
+//    guideView.delegate = self;
+//    guideView.imageArr = @[@"01找工作",@"02爱学习",@"03交朋友"];
+//    [guideView addToWindow];
     
 //    self.arr = @[@[@"说的阿萨德",@"3"],@[@"说德11111111231111",@"4"],@[@"说的123阿萨说的123阿萨说的123阿萨",@"3"],@[@"说3的德",@"4"]];
 //    [self.view addSubview:self.coustromTableView];
@@ -67,6 +69,57 @@
 //        [weakself.collectionView reloadData];
 //        [weakself.collectionView.mj_footer endRefreshing];
 //    }];
+    
+    if ([LBXPermission isServicesEnabledWithType:LBXPermissionType_Camera])
+    {
+        NSLog(@"开了相机")
+    }
+    else
+    {
+        NSLog(@"没开相机")
+    }
+    
+//    if ([LBXPermission isServicesEnabledWithType:LBXPermissionType_Location])
+//    {
+//        NSLog(@"开了定位")
+//    }
+//    else
+//    {
+//        NSLog(@"没开定位")
+//    }
+//
+//    if ([LBXPermission isDeviceSupportedWithType:LBXPermissionType_Camera])
+//    {
+//        NSLog(@"支持相机")
+//    }
+//    else
+//    {
+//        NSLog(@"不支持相机")
+//    }
+//
+//    if ([LBXPermission authorizedWithType:LBXPermissionType_Camera])
+//    {
+//        NSLog(@"支持相机")
+//    }
+//    else
+//    {
+//        NSLog(@"不支持相机")
+//    }
+//
+    //相机
+    [LBXPermission authorizeWithType:LBXPermissionType_Camera completion:^(BOOL granted, BOOL firstTime) {
+        
+        if (granted) {
+            //TODO
+            //dosth
+        }
+        else if (!firstTime)
+        {
+            //不是第一次请求权限，那么可以弹出权限提示，用户选择设置，即跳转到设置界面，设置权限
+            [LBXPermissionSetting showAlertToDislayPrivacySettingWithTitle:@"提示" msg:@"没有相机权限，是否前往设置" cancel:@"取消" setting:@"设置"];
+        }
+    }];
+    
 }
 
 - (void)endShowGuideView

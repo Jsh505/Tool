@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -24,9 +24,8 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iwl-Jc-ebJ">
-                    <rect key="frame" x="38" y="48" width="299" height="67"/>
+                    <rect key="frame" x="0.0" y="48" width="375" height="67"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="299" id="40i-jO-3Ki"/>
                         <constraint firstAttribute="height" constant="67" id="fFd-6F-xq8"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -34,14 +33,16 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vAh-7r-tKe">
-                    <rect key="frame" x="37.5" y="191" width="299" height="67"/>
+                    <rect key="frame" x="-0.5" y="120" width="375" height="67"/>
+                    <color key="backgroundColor" red="0.91372549020000005" green="0.1137254902" blue="0.0039215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <state key="normal" title="Button"/>
                     <connections>
                         <action selector="buttonCilick:" destination="-1" eventType="touchUpInside" id="cCV-ln-zE2"/>
                     </connections>
                 </button>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2FV-Fg-g31">
-                    <rect key="frame" x="5" y="278" width="364" height="364"/>
+                    <rect key="frame" x="15" y="287" width="345" height="345"/>
+                    <color key="backgroundColor" red="0.20000000000000001" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="2FV-Fg-g31" secondAttribute="height" id="90D-aD-Dmw"/>
                     </constraints>
@@ -50,14 +51,19 @@
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="iwl-Jc-ebJ" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="28" id="0Na-O9-7ma"/>
-                <constraint firstItem="2FV-Fg-g31" firstAttribute="top" secondItem="vAh-7r-tKe" secondAttribute="bottom" constant="20" id="3Se-UI-9di"/>
+                <constraint firstItem="2FV-Fg-g31" firstAttribute="top" secondItem="vAh-7r-tKe" secondAttribute="bottom" constant="100" id="3Se-UI-9di"/>
                 <constraint firstItem="vAh-7r-tKe" firstAttribute="height" secondItem="iwl-Jc-ebJ" secondAttribute="height" id="Ntr-E8-vu6"/>
-                <constraint firstItem="2FV-Fg-g31" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="5" id="QYJ-ha-7k7"/>
+                <constraint firstItem="2FV-Fg-g31" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="15" id="SQd-ab-Tkf"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="2FV-Fg-g31" secondAttribute="trailing" constant="15" id="STK-4S-UFa"/>
                 <constraint firstItem="vAh-7r-tKe" firstAttribute="centerX" secondItem="iwl-Jc-ebJ" secondAttribute="centerX" id="Ygw-lA-2iT"/>
-                <constraint firstItem="2FV-Fg-g31" firstAttribute="centerX" secondItem="vAh-7r-tKe" secondAttribute="centerX" id="a2P-QA-5FY"/>
                 <constraint firstItem="iwl-Jc-ebJ" firstAttribute="centerX" secondItem="Q5M-cg-NOt" secondAttribute="centerX" id="cga-h2-fUM"/>
-                <constraint firstItem="vAh-7r-tKe" firstAttribute="top" secondItem="iwl-Jc-ebJ" secondAttribute="bottom" constant="76" id="efs-RM-Pf9"/>
-                <constraint firstItem="vAh-7r-tKe" firstAttribute="width" secondItem="iwl-Jc-ebJ" secondAttribute="width" id="htQ-sg-IGg"/>
+                <constraint firstItem="vAh-7r-tKe" firstAttribute="top" secondItem="iwl-Jc-ebJ" secondAttribute="bottom" constant="5" id="efs-RM-Pf9"/>
+                <constraint firstItem="vAh-7r-tKe" firstAttribute="width" secondItem="iwl-Jc-ebJ" secondAttribute="width" id="htQ-sg-IGg">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="widthScreen" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </constraint>
+                <constraint firstItem="iwl-Jc-ebJ" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="onn-l5-loJ"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
             <point key="canvasLocation" x="84.5" y="58.5"/>

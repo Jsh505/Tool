@@ -29,7 +29,5 @@
 #import "UIImageView+SDSetImage.h"
 /** UIView基础 **/
 #import "UIView+Tool.h"
-/** TextView占位+字数 **/
-#import "UITextView+YLTextView.h"
 
 #endif /* ToolHeader_h */
