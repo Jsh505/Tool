@@ -44,6 +44,10 @@
 		A8979556209059E700CEEE58 /* UserSignData.m in Sources */ = {isa = PBXBuildFile; fileRef = A897954E209059E700CEEE58 /* UserSignData.m */; };
 		A8979557209059E700CEEE58 /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A897954F209059E700CEEE58 /* BaseModel.m */; };
 		A8979559209059E700CEEE58 /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A8979551209059E700CEEE58 /* UserModel.m */; };
+		A898557C214BBD8200624C26 /* CoustomPopView.m in Sources */ = {isa = PBXBuildFile; fileRef = A898557B214BBD8200624C26 /* CoustomPopView.m */; };
+		A898557E214BBDA500624C26 /* CoustomPopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A898557D214BBDA500624C26 /* CoustomPopView.xib */; };
+		A8985584214BC02F00624C26 /* CoustomePopVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A8985582214BC02F00624C26 /* CoustomePopVC.m */; };
+		A8985585214BC02F00624C26 /* CoustomePopVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8985583214BC02F00624C26 /* CoustomePopVC.xib */; };
 		A8A486D21FB2CDFD00304451 /* UIButton+TouchOne.m in Sources */ = {isa = PBXBuildFile; fileRef = A8A486D11FB2CDFD00304451 /* UIButton+TouchOne.m */; };
 		A8A486D51FB2CEF800304451 /* UIButton+SDSetImage.m in Sources */ = {isa = PBXBuildFile; fileRef = A8A486D41FB2CEF800304451 /* UIButton+SDSetImage.m */; };
 		A8A486D81FB2CF2F00304451 /* UIImageView+SDSetImage.m in Sources */ = {isa = PBXBuildFile; fileRef = A8A486D71FB2CF2F00304451 /* UIImageView+SDSetImage.m */; };
@@ -254,6 +258,12 @@
 		A8979552209059E700CEEE58 /* UserSignData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserSignData.h; sourceTree = "<group>"; };
 		A8979554209059E700CEEE58 /* BaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseModel.h; sourceTree = "<group>"; };
 		A8979555209059E700CEEE58 /* UserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserModel.h; sourceTree = "<group>"; };
+		A898557A214BBD8200624C26 /* CoustomPopView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoustomPopView.h; sourceTree = "<group>"; };
+		A898557B214BBD8200624C26 /* CoustomPopView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoustomPopView.m; sourceTree = "<group>"; };
+		A898557D214BBDA500624C26 /* CoustomPopView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CoustomPopView.xib; sourceTree = "<group>"; };
+		A8985581214BC02F00624C26 /* CoustomePopVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoustomePopVC.h; sourceTree = "<group>"; };
+		A8985582214BC02F00624C26 /* CoustomePopVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoustomePopVC.m; sourceTree = "<group>"; };
+		A8985583214BC02F00624C26 /* CoustomePopVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CoustomePopVC.xib; sourceTree = "<group>"; };
 		A8A486D01FB2CDFD00304451 /* UIButton+TouchOne.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+TouchOne.h"; sourceTree = "<group>"; };
 		A8A486D11FB2CDFD00304451 /* UIButton+TouchOne.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+TouchOne.m"; sourceTree = "<group>"; };
 		A8A486D31FB2CEF800304451 /* UIButton+SDSetImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+SDSetImage.h"; sourceTree = "<group>"; };
@@ -662,6 +672,7 @@
 		A897953820904B6800CEEE58 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				A8985579214BBD5400624C26 /* 自定义弹窗 */,
 				A8F38E4E2149252F006B71D9 /* LBXPermissions */,
 				A81285AA2102D1F5004D891C /* WHDebugTool */,
 				A8F82E5620F4B6D80077FC1E /* OtherHeader.h */,
@@ -699,6 +710,26 @@
 				A897954F209059E700CEEE58 /* BaseModel.m */,
 			);
 			path = User;
+			sourceTree = "<group>";
+		};
+		A8985579214BBD5400624C26 /* 自定义弹窗 */ = {
+			isa = PBXGroup;
+			children = (
+				A898557A214BBD8200624C26 /* CoustomPopView.h */,
+				A898557B214BBD8200624C26 /* CoustomPopView.m */,
+				A898557D214BBDA500624C26 /* CoustomPopView.xib */,
+			);
+			path = "自定义弹窗";
+			sourceTree = "<group>";
+		};
+		A8985580214BC00600624C26 /* 自定义弹窗 */ = {
+			isa = PBXGroup;
+			children = (
+				A8985581214BC02F00624C26 /* CoustomePopVC.h */,
+				A8985582214BC02F00624C26 /* CoustomePopVC.m */,
+				A8985583214BC02F00624C26 /* CoustomePopVC.xib */,
+			);
+			path = "自定义弹窗";
 			sourceTree = "<group>";
 		};
 		A8A5AD4620DBAD3400F45970 /* 测试 */ = {
@@ -740,6 +771,7 @@
 		A8ABFD392092FA3B00107B69 /* 本地下载 */ = {
 			isa = PBXGroup;
 			children = (
+				A8985580214BC00600624C26 /* 自定义弹窗 */,
 				A8A5AD4620DBAD3400F45970 /* 测试 */,
 				A8ABFD462092FF9200107B69 /* 评分 */,
 				A8ABFD472092FF9E00107B69 /* 倒计时 */,
@@ -1462,6 +1494,7 @@
 				0FC8A40A1E84EE0A008D53BB /* LaunchScreen.storyboard in Resources */,
 				A897953620904B6100CEEE58 /* MBProgressHUD+JDragon.bundle in Resources */,
 				A897954C209054EF00CEEE58 /* OtherVC.xib in Resources */,
+				A8985585214BC02F00624C26 /* CoustomePopVC.xib in Resources */,
 				A8ABFDD120930ACF00107B69 /* no_data.png in Resources */,
 				0FC8A4071E84EE0A008D53BB /* Assets.xcassets in Resources */,
 				A8F0393D20ECA22500A0541C /* JSHHorseRaceLampView.xib in Resources */,
@@ -1474,6 +1507,7 @@
 				A8ABFDC520930ACF00107B69 /* back_button_normal.png in Resources */,
 				A8ABFDC820930ACF00107B69 /* flash_close_pic.png in Resources */,
 				A8ABFD452092FD9100107B69 /* RedBadgeVC.xib in Resources */,
+				A898557E214BBDA500624C26 /* CoustomPopView.xib in Resources */,
 				0FC8A4051E84EE0A008D53BB /* Main.storyboard in Resources */,
 				A8ABFDC920930ACF00107B69 /* flash_open_pic.png in Resources */,
 				A8ABFDD320930ACF00107B69 /* change_camera_pic.png in Resources */,
@@ -1647,6 +1681,7 @@
 				A8ABFDB720930ACF00107B69 /* ZZPhotoPickerViewController.m in Sources */,
 				A8ABFD6320930AA700107B69 /* ZZBrowserVC.m in Sources */,
 				A8F38E9B2149254B006B71D9 /* LBXPermissionHealth.m in Sources */,
+				A8985584214BC02F00624C26 /* CoustomePopVC.m in Sources */,
 				A8ABFDD420930ACF00107B69 /* ZZAlumAnimation.m in Sources */,
 				A8ABFDC320930ACF00107B69 /* ZZBrowserPickerViewController.m in Sources */,
 				A896BFFA2021874000EFA5D4 /* NullSafe.m in Sources */,
@@ -1694,6 +1729,7 @@
 				A8EB6920209163FE0043E1FF /* MenuTableViewController.m in Sources */,
 				A8EB6913209163F20043E1FF /* MXNavigationBarManager.m in Sources */,
 				A8ABFD442092FD9100107B69 /* RedBadgeVC.m in Sources */,
+				A898557C214BBD8200624C26 /* CoustomPopView.m in Sources */,
 				A8A486DB1FB2CFD500304451 /* UIScrollView+EmptyDataSet.m in Sources */,
 				A8F82E1C20F4AAAB0077FC1E /* NSAttributedString+Category.m in Sources */,
 				A8F82E3720F4AC9E0077FC1E /* NSArray+Safe.m in Sources */,

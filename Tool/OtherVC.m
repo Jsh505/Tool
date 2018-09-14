@@ -13,6 +13,7 @@
 #import "KxMenuVC.h"
 #import "ZZBrowserVC.h"
 #import "TestViewController.h"
+#import "CoustomePopVC.h"
 
 @interface OtherVC ()
 
@@ -33,7 +34,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 6;
+    return 7;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -49,7 +50,7 @@
     {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
-    cell.textLabel.text = @[@"评分功能",@"倒计时",@"自定义标签",@"按钮下拉菜单",@"多选图片",@"测试"][indexPath.row];
+    cell.textLabel.text = @[@"评分功能",@"倒计时",@"自定义标签",@"按钮下拉菜单",@"多选图片",@"测试",@"自定义弹窗"][indexPath.row];
     return cell;
 }
 
@@ -92,6 +93,12 @@
         case 5:
         {
             TestViewController * vc = [[TestViewController alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
+            break;
+        }
+        case 6:
+        {
+            CoustomePopVC * vc = [[CoustomePopVC alloc] init];
             [self.navigationController pushViewController:vc animated:YES];
             break;
         }
